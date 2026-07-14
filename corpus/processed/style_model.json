@@ -1,0 +1,307 @@
+{
+  "code_languages": {
+    "bash": 487,
+    "javascript": 27,
+    "json": 72,
+    "markdown": 20,
+    "mermaid": 22,
+    "python": 680,
+    "rust": 22,
+    "tsx": 12,
+    "typescript": 92,
+    "yaml": 57
+  },
+  "corpus_size": 152,
+  "derived_rules": [
+    "Every post opens by naming a failure in the status quo (RAG, cloud, chat).",
+    "Every post resolves with an inspectable artifact or a build step.",
+    "Use comparison tables to make an abstract claim concrete.",
+    "Prefer 'intelligence is not the model' framing: the substrate is the product.",
+    "End with forward pointers (next steps, unanswered questions, future work)."
+  ],
+  "recurring_section_patterns": [
+    {
+      "count": 53,
+      "title": "conclusion"
+    },
+    {
+      "count": 28,
+      "title": "prerequisites"
+    },
+    {
+      "count": 27,
+      "title": "introduction"
+    },
+    {
+      "count": 26,
+      "title": "table of contents"
+    },
+    {
+      "count": 12,
+      "title": "explanation"
+    },
+    {
+      "count": 11,
+      "title": "troubleshooting"
+    },
+    {
+      "count": 11,
+      "title": "references"
+    },
+    {
+      "count": 10,
+      "title": "related posts"
+    },
+    {
+      "count": 9,
+      "title": "related repositories"
+    },
+    {
+      "count": 7,
+      "title": "install dependencies"
+    },
+    {
+      "count": 7,
+      "title": "executive summary"
+    },
+    {
+      "count": 6,
+      "title": "project overview"
+    },
+    {
+      "count": 6,
+      "title": "installing dependencies"
+    },
+    {
+      "count": 6,
+      "title": "security considerations"
+    },
+    {
+      "count": 6,
+      "title": "testing & documentation"
+    },
+    {
+      "count": 5,
+      "title": "installation"
+    },
+    {
+      "count": 5,
+      "title": "getting started"
+    },
+    {
+      "count": 5,
+      "title": "performance optimization"
+    },
+    {
+      "count": 5,
+      "title": "configuration"
+    },
+    {
+      "count": 5,
+      "title": "architecture overview"
+    },
+    {
+      "count": 4,
+      "title": "setting up the development environment"
+    },
+    {
+      "count": 4,
+      "title": "testing and quality assurance"
+    },
+    {
+      "count": 4,
+      "title": "performance testing"
+    },
+    {
+      "count": 4,
+      "title": "monitoring"
+    },
+    {
+      "count": 4,
+      "title": "running the application"
+    }
+  ],
+  "schema_version": "1.0",
+  "structure_profile": {
+    "mean_sections": 32.82,
+    "mean_words": 3899.1,
+    "pct_long_form_ge_1500w": 65.8,
+    "pct_multi_section_ge_5": 92.1,
+    "pct_with_code": 79.6,
+    "pct_with_frontmatter": 100.0
+  },
+  "tone_profile": {
+    "documentation_observations": [
+      "Titles are thesis statements, not SEO clickbait.",
+      "Openings state a complaint or a paradox, then resolve it structurally.",
+      "Heavy use of comparison tables (Software Compiler | Knowledge Compiler).",
+      "Second person rarely used; the reader is addressed as a peer engineer."
+    ],
+    "signature_first_person_in_titles": 3,
+    "uses_analogy_language_commonly": true
+  },
+  "top_signature_terms": [
+    {
+      "count": 249,
+      "term": "ir"
+    },
+    {
+      "count": 228,
+      "term": "agent"
+    },
+    {
+      "count": 149,
+      "term": "model"
+    },
+    {
+      "count": 119,
+      "term": "local"
+    },
+    {
+      "count": 99,
+      "term": "graph"
+    },
+    {
+      "count": 96,
+      "term": "knowledge"
+    },
+    {
+      "count": 92,
+      "term": "sovereign"
+    },
+    {
+      "count": 83,
+      "term": "rag"
+    },
+    {
+      "count": 71,
+      "term": "spec"
+    },
+    {
+      "count": 68,
+      "term": "intelligence"
+    },
+    {
+      "count": 67,
+      "term": "memory"
+    },
+    {
+      "count": 49,
+      "term": "loop"
+    },
+    {
+      "count": 38,
+      "term": "retrieval"
+    },
+    {
+      "count": 35,
+      "term": "autonomous"
+    },
+    {
+      "count": 31,
+      "term": "knowledge graph"
+    },
+    {
+      "count": 28,
+      "term": "evaluation"
+    },
+    {
+      "count": 28,
+      "term": "sovereignty"
+    },
+    {
+      "count": 26,
+      "term": "compile"
+    },
+    {
+      "count": 21,
+      "term": "embedding"
+    },
+    {
+      "count": 20,
+      "term": "infrastructure"
+    }
+  ],
+  "top_themes_from_tags": [
+    {
+      "count": 47,
+      "theme": "ai"
+    },
+    {
+      "count": 45,
+      "theme": "ollama"
+    },
+    {
+      "count": 28,
+      "theme": "rag"
+    },
+    {
+      "count": 24,
+      "theme": "python"
+    },
+    {
+      "count": 20,
+      "theme": "llm"
+    },
+    {
+      "count": 20,
+      "theme": "tutorial"
+    },
+    {
+      "count": 19,
+      "theme": "sovereign-ai"
+    },
+    {
+      "count": 18,
+      "theme": "local-first"
+    },
+    {
+      "count": 17,
+      "theme": "local ai"
+    },
+    {
+      "count": 16,
+      "theme": "machine learning"
+    },
+    {
+      "count": 15,
+      "theme": "local llms"
+    },
+    {
+      "count": 15,
+      "theme": "next.js"
+    },
+    {
+      "count": 14,
+      "theme": "fastapi"
+    },
+    {
+      "count": 11,
+      "theme": "ai agents"
+    },
+    {
+      "count": 11,
+      "theme": "ai development"
+    },
+    {
+      "count": 10,
+      "theme": "knowledge graph"
+    },
+    {
+      "count": 10,
+      "theme": "knowledge-graphs"
+    },
+    {
+      "count": 9,
+      "theme": "react"
+    },
+    {
+      "count": 9,
+      "theme": "openai"
+    },
+    {
+      "count": 9,
+      "theme": "mcp"
+    }
+  ]
+}

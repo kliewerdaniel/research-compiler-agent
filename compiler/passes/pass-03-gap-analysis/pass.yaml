@@ -1,0 +1,8 @@
+id: pass-03-gap-analysis
+name: Gap & Research-Direction Analysis
+produces: gap-analysis-ir
+consumes: [knowledge-extraction-ir, style-model-ir]
+entrypoint: run.py
+deterministic: true
+model_required: false
+description: Mine the corpus for co-occurrence gaps, under-explored concepts, and unanswered questions to propose next research directions.

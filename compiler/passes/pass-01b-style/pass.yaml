@@ -1,0 +1,8 @@
+id: pass-01b-style
+name: Writing Style Analysis
+produces: style-model-ir
+consumes: [markdown-ir]
+entrypoint: run.py
+deterministic: true
+model_required: false
+description: Compute a reproducible style model (structure, lexicon, tone, depth, themes) from the corpus.

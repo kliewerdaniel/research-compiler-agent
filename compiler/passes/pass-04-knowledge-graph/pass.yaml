@@ -1,0 +1,8 @@
+id: pass-04-knowledge-graph
+name: Knowledge Graph Construction
+produces: knowledge-graph-ir
+consumes: [knowledge-extraction-ir, gap-analysis-ir]
+entrypoint: run.py
+deterministic: true
+model_required: false
+description: Build a NetworkX knowledge graph (concepts, tech, repos, people) with typed edges and a GraphML export.

@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "properties": {
+    "embedding_model": {"type": "string"},
+    "embedding_dim": {"type": "integer"},
+    "concept_count": {"type": "integer"},
+    "concepts": {"type": "array", "items": {"type": "string"}},
+    "neighbours": {"type": "object"},
+    "semantic_gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "connects": {"type": "array", "items": {"type": "string"}},
+          "similarity": {"type": "number"},
+          "co_occurrence_norm": {"type": "number"},
+          "gap_score": {"type": "number"}
+        },
+        "required": ["connects", "similarity", "gap_score"]
+      }
+    },
+    "reranked_hypotheses": {"type": "array", "items": {"type": "object"}},
+    "top_semantic_gap": {"type": ["object", "null"]}
+  },
+  "required": ["embedding_model", "embedding_dim", "semantic_gaps"]
+}

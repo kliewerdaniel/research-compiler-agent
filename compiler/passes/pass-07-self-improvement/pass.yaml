@@ -1,0 +1,8 @@
+id: pass-07-self-improvement
+name: Self-Improvement Loop
+produces: self-improvement-ir
+consumes: [research-generation-ir, repo-generation-ir, style-model-ir]
+entrypoint: run.py
+deterministic: false
+model_required: true
+description: Maintain a capability ledger (current/missing/failed capabilities, improvement ideas) and propose the next compiler improvement.

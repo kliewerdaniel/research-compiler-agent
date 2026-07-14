@@ -1,0 +1,8 @@
+id: pass-01-parse
+name: Markdown Parsing
+produces: markdown-ir
+consumes: []
+entrypoint: run.py
+deterministic: true
+model_required: false
+description: Parse raw Markdown blog posts into a Markdown IR (structure, headings, metadata, code blocks, links).

@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "properties": {
+    "title": {"type": "string"},
+    "slug": {"type": "string"},
+    "abstract": {"type": "string"},
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "heading": {"type": "string"},
+          "body": {"type": "string"}
+        },
+        "required": ["heading", "body"]
+      }
+    },
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "references": {"type": "array", "items": {"type": "string"}},
+    "next_steps": {"type": "array", "items": {"type": "string"}},
+    "potential_projects": {"type": "array", "items": {"type": "string"}},
+    "becomes_software": {"type": "boolean"},
+    "repo_idea": {"type": "string"}
+  },
+  "required": ["title", "sections"]
+}

@@ -1,0 +1,8 @@
+id: pass-03b-embeddings
+name: Semantic Gap Ranking (Embeddings)
+produces: embeddings-ir
+consumes: [knowledge-extraction-ir, gap-analysis-ir]
+entrypoint: run.py
+deterministic: false
+model_required: true
+description: Embed corpus concepts via Ollama (nomic-embed-text) and re-rank research gaps by semantic affinity vs. co-occurrence — surfacing pairs that are semantically close but never co-developed.

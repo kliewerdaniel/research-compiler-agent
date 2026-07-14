@@ -1,0 +1,39 @@
+# Runtime configuration for the Research Compiler Agent.
+# Override via environment variables (KC_PORT, KC_MODEL, KC_EMBED_MODEL, ...)
+# or CLI flags (--port, --model, --local, ...).
+
+# Local inference server (OpenAI-compatible: llama.cpp / Ollama / vLLM)
+inference:
+  port: 8080
+  host: localhost
+  model: null            # set to your local model name, e.g. llama3.1, ornith
+  embed_model: nomic-embed-text:latest
+  timeout: 900           # per-request seconds (raise for slow CPU / large corpus)
+  max_tokens: 16384      # reasoning models need headroom for the JSON answer
+  ollama_port: 11434
+
+# Compiler behaviour
+compiler:
+  source: corpus/source_blog_posts
+  build: build
+  incremental: false
+
+# Generation
+generation:
+  # how many ranked research gaps to consider per cycle
+  top_gaps: 1
+  # minimum priority to attempt a full post
+  min_priority: 0.5
+  # always emit a deterministic brief even without --local
+  fallback_brief: true
+
+# Knowledge graph
+graph:
+  backend: networkx       # networkx | (future) neo4j
+  max_edges_per_node: 12
+  export_graphml: true
+
+# Self-improvement
+self_improvement:
+  ledger: agents/self_improvement.md
+  proposals_dir: experiments

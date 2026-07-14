@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "should_build": {"type": "boolean"},
+    "repo_name": {"type": "string"},
+    "one_line": {"type": "string"},
+    "readme": {"type": "string"},
+    "structure": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {"type": "string"},
+          "purpose": {"type": "string"}
+        },
+        "required": ["path"]
+      }
+    },
+    "architecture": {"type": "string"},
+    "roadmap": {"type": "array", "items": {"type": "string"}},
+    "example_code": {"type": "object"},
+    "test_code": {"type": "object"}
+  },
+  "required": ["should_build"]
+}

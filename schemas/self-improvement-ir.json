@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "capabilities_current": {"type": "array", "items": {"type": "string"}},
+    "capabilities_missing": {"type": "array", "items": {"type": "string"}},
+    "failed_experiments": {"type": "array", "items": {"type": "string"}},
+    "improvement_ideas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "idea": {"type": "string"},
+          "rationale": {"type": "string"},
+          "effort": {"type": "string"},
+          "impact": {"type": "string"}
+        },
+        "required": ["idea"]
+      }
+    },
+    "next_capability": {"type": "string"},
+    "next_capability_spec": {"type": "string"}
+  },
+  "required": ["improvement_ideas"]
+}

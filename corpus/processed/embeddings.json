@@ -1,0 +1,2254 @@
+{
+  "concept_count": 53,
+  "concepts": [
+    "ollama",
+    "python",
+    "ai-agents",
+    "rag",
+    "local-inference",
+    "knowledge-graphs",
+    "ai",
+    "embeddings",
+    "llama3",
+    "sentence-transformers",
+    "rlhf",
+    "docker",
+    "typescript",
+    "local-first-ai",
+    "mcp",
+    "transformers",
+    "sovereign-ai",
+    "quantization",
+    "ai-sovereignty",
+    "data-sovereignty",
+    "llm",
+    "tutorial",
+    "local-first",
+    "local ai",
+    "machine learning",
+    "prompt-engineering",
+    "local llms",
+    "next.js",
+    "fastapi",
+    "reinforcement-learning",
+    "rust",
+    "kubernetes",
+    "ai development",
+    "react",
+    "openai",
+    "privacy",
+    "web development",
+    "vibe coding",
+    "chromadb",
+    "ai integration",
+    "django",
+    "open source",
+    "vector databases",
+    "architecture",
+    "graphrag",
+    "content generation",
+    "full-stack",
+    "nlp",
+    "data science",
+    "cuda",
+    "gpu-offload",
+    "agent frameworks",
+    "openai agents sdk"
+  ],
+  "embedding_dim": 768,
+  "embedding_model": "nomic-embed-text:latest",
+  "neighbours": {
+    "agent frameworks": [
+      {
+        "concept": "ai-agents",
+        "similarity": 0.8808
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.8229
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.8054
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.793
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7874
+      },
+      {
+        "concept": "rlhf",
+        "similarity": 0.7771
+      }
+    ],
+    "ai": [
+      {
+        "concept": "ai development",
+        "similarity": 0.9521
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.9151
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.9107
+      },
+      {
+        "concept": "ai integration",
+        "similarity": 0.9031
+      },
+      {
+        "concept": "machine learning",
+        "similarity": 0.9022
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.8943
+      }
+    ],
+    "ai development": [
+      {
+        "concept": "ai",
+        "similarity": 0.9521
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.9082
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8983
+      },
+      {
+        "concept": "ai integration",
+        "similarity": 0.8837
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.8677
+      },
+      {
+        "concept": "machine learning",
+        "similarity": 0.8626
+      }
+    ],
+    "ai integration": [
+      {
+        "concept": "ai",
+        "similarity": 0.9031
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8837
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8458
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.8318
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.8277
+      },
+      {
+        "concept": "local ai",
+        "similarity": 0.8171
+      }
+    ],
+    "ai-agents": [
+      {
+        "concept": "ai",
+        "similarity": 0.9107
+      },
+      {
+        "concept": "agent frameworks",
+        "similarity": 0.8808
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8677
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.8482
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8416
+      },
+      {
+        "concept": "sovereign-ai",
+        "similarity": 0.8401
+      }
+    ],
+    "ai-sovereignty": [
+      {
+        "concept": "data-sovereignty",
+        "similarity": 0.9344
+      },
+      {
+        "concept": "sovereign-ai",
+        "similarity": 0.9332
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.8639
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8351
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.8254
+      },
+      {
+        "concept": "ai integration",
+        "similarity": 0.8153
+      }
+    ],
+    "architecture": [
+      {
+        "concept": "ai",
+        "similarity": 0.8943
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.86
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.8482
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8436
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.8401
+      },
+      {
+        "concept": "ai integration",
+        "similarity": 0.8277
+      }
+    ],
+    "chromadb": [
+      {
+        "concept": "ai",
+        "similarity": 0.8048
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7856
+      },
+      {
+        "concept": "cuda",
+        "similarity": 0.7771
+      },
+      {
+        "concept": "machine learning",
+        "similarity": 0.7746
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7724
+      },
+      {
+        "concept": "ollama",
+        "similarity": 0.7678
+      }
+    ],
+    "content generation": [
+      {
+        "concept": "ai",
+        "similarity": 0.8361
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8354
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8304
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.8201
+      },
+      {
+        "concept": "machine learning",
+        "similarity": 0.7944
+      },
+      {
+        "concept": "rust",
+        "similarity": 0.7792
+      }
+    ],
+    "cuda": [
+      {
+        "concept": "ai",
+        "similarity": 0.8434
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8175
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8137
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.7982
+      },
+      {
+        "concept": "ai integration",
+        "similarity": 0.785
+      },
+      {
+        "concept": "openai",
+        "similarity": 0.78
+      }
+    ],
+    "data science": [
+      {
+        "concept": "ai",
+        "similarity": 0.8783
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8435
+      },
+      {
+        "concept": "machine learning",
+        "similarity": 0.832
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8238
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.8183
+      },
+      {
+        "concept": "data-sovereignty",
+        "similarity": 0.8125
+      }
+    ],
+    "data-sovereignty": [
+      {
+        "concept": "ai-sovereignty",
+        "similarity": 0.9344
+      },
+      {
+        "concept": "sovereign-ai",
+        "similarity": 0.867
+      },
+      {
+        "concept": "data science",
+        "similarity": 0.8125
+      },
+      {
+        "concept": "privacy",
+        "similarity": 0.79
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.7893
+      },
+      {
+        "concept": "kubernetes",
+        "similarity": 0.7624
+      }
+    ],
+    "django": [
+      {
+        "concept": "tutorial",
+        "similarity": 0.8243
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.8205
+      },
+      {
+        "concept": "python",
+        "similarity": 0.8104
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.7997
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7851
+      },
+      {
+        "concept": "data science",
+        "similarity": 0.7779
+      }
+    ],
+    "docker": [
+      {
+        "concept": "ai",
+        "similarity": 0.7844
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7788
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.7709
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.7692
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7677
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.7538
+      }
+    ],
+    "embeddings": [
+      {
+        "concept": "ai",
+        "similarity": 0.8039
+      },
+      {
+        "concept": "ai integration",
+        "similarity": 0.7942
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7823
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.7784
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7724
+      },
+      {
+        "concept": "machine learning",
+        "similarity": 0.7641
+      }
+    ],
+    "fastapi": [
+      {
+        "concept": "ai",
+        "similarity": 0.8124
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7855
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7846
+      },
+      {
+        "concept": "openai",
+        "similarity": 0.7841
+      },
+      {
+        "concept": "llama3",
+        "similarity": 0.7823
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.778
+      }
+    ],
+    "full-stack": [
+      {
+        "concept": "ai",
+        "similarity": 0.7951
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7856
+      },
+      {
+        "concept": "rust",
+        "similarity": 0.7707
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.7685
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7682
+      },
+      {
+        "concept": "ai integration",
+        "similarity": 0.7598
+      }
+    ],
+    "gpu-offload": [
+      {
+        "concept": "cuda",
+        "similarity": 0.7442
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.7429
+      },
+      {
+        "concept": "open source",
+        "similarity": 0.7277
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7239
+      },
+      {
+        "concept": "full-stack",
+        "similarity": 0.7233
+      },
+      {
+        "concept": "openai",
+        "similarity": 0.7199
+      }
+    ],
+    "graphrag": [
+      {
+        "concept": "ai",
+        "similarity": 0.8068
+      },
+      {
+        "concept": "knowledge-graphs",
+        "similarity": 0.7981
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7792
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.772
+      },
+      {
+        "concept": "python",
+        "similarity": 0.7654
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.7614
+      }
+    ],
+    "knowledge-graphs": [
+      {
+        "concept": "ai",
+        "similarity": 0.8122
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8021
+      },
+      {
+        "concept": "graphrag",
+        "similarity": 0.7981
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.7875
+      },
+      {
+        "concept": "kubernetes",
+        "similarity": 0.7819
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7809
+      }
+    ],
+    "kubernetes": [
+      {
+        "concept": "ai",
+        "similarity": 0.8351
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8124
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.811
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.8017
+      },
+      {
+        "concept": "rust",
+        "similarity": 0.7917
+      },
+      {
+        "concept": "ai-sovereignty",
+        "similarity": 0.7916
+      }
+    ],
+    "llama3": [
+      {
+        "concept": "ai",
+        "similarity": 0.85
+      },
+      {
+        "concept": "llm",
+        "similarity": 0.8379
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.822
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8079
+      },
+      {
+        "concept": "ollama",
+        "similarity": 0.8029
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.802
+      }
+    ],
+    "llm": [
+      {
+        "concept": "local llms",
+        "similarity": 0.916
+      },
+      {
+        "concept": "llama3",
+        "similarity": 0.8379
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.8155
+      },
+      {
+        "concept": "machine learning",
+        "similarity": 0.8123
+      },
+      {
+        "concept": "nlp",
+        "similarity": 0.8051
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7835
+      }
+    ],
+    "local ai": [
+      {
+        "concept": "local-first-ai",
+        "similarity": 0.9217
+      },
+      {
+        "concept": "local-first",
+        "similarity": 0.8989
+      },
+      {
+        "concept": "local-inference",
+        "similarity": 0.8962
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.8768
+      },
+      {
+        "concept": "local llms",
+        "similarity": 0.8571
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8403
+      }
+    ],
+    "local llms": [
+      {
+        "concept": "llm",
+        "similarity": 0.916
+      },
+      {
+        "concept": "local ai",
+        "similarity": 0.8571
+      },
+      {
+        "concept": "local-inference",
+        "similarity": 0.7913
+      },
+      {
+        "concept": "local-first-ai",
+        "similarity": 0.7898
+      },
+      {
+        "concept": "local-first",
+        "similarity": 0.7875
+      },
+      {
+        "concept": "llama3",
+        "similarity": 0.7822
+      }
+    ],
+    "local-first": [
+      {
+        "concept": "local-first-ai",
+        "similarity": 0.9764
+      },
+      {
+        "concept": "local ai",
+        "similarity": 0.8989
+      },
+      {
+        "concept": "local-inference",
+        "similarity": 0.8384
+      },
+      {
+        "concept": "local llms",
+        "similarity": 0.7875
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.7679
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.755
+      }
+    ],
+    "local-first-ai": [
+      {
+        "concept": "local-first",
+        "similarity": 0.9764
+      },
+      {
+        "concept": "local ai",
+        "similarity": 0.9217
+      },
+      {
+        "concept": "local-inference",
+        "similarity": 0.8423
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.8263
+      },
+      {
+        "concept": "local llms",
+        "similarity": 0.7898
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7888
+      }
+    ],
+    "local-inference": [
+      {
+        "concept": "local ai",
+        "similarity": 0.8962
+      },
+      {
+        "concept": "local-first-ai",
+        "similarity": 0.8423
+      },
+      {
+        "concept": "local-first",
+        "similarity": 0.8384
+      },
+      {
+        "concept": "local llms",
+        "similarity": 0.7913
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.7651
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.741
+      }
+    ],
+    "machine learning": [
+      {
+        "concept": "ai",
+        "similarity": 0.9022
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8626
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.841
+      },
+      {
+        "concept": "data science",
+        "similarity": 0.832
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.8241
+      },
+      {
+        "concept": "reinforcement-learning",
+        "similarity": 0.8212
+      }
+    ],
+    "mcp": [
+      {
+        "concept": "ai",
+        "similarity": 0.8203
+      },
+      {
+        "concept": "nlp",
+        "similarity": 0.8067
+      },
+      {
+        "concept": "machine learning",
+        "similarity": 0.8057
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8019
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7964
+      },
+      {
+        "concept": "ai integration",
+        "similarity": 0.7684
+      }
+    ],
+    "next.js": [
+      {
+        "concept": "ai",
+        "similarity": 0.8143
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.8053
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7964
+      },
+      {
+        "concept": "data science",
+        "similarity": 0.7901
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7891
+      },
+      {
+        "concept": "react",
+        "similarity": 0.7684
+      }
+    ],
+    "nlp": [
+      {
+        "concept": "ai",
+        "similarity": 0.8369
+      },
+      {
+        "concept": "mcp",
+        "similarity": 0.8067
+      },
+      {
+        "concept": "llm",
+        "similarity": 0.8051
+      },
+      {
+        "concept": "machine learning",
+        "similarity": 0.8026
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8024
+      },
+      {
+        "concept": "python",
+        "similarity": 0.7977
+      }
+    ],
+    "ollama": [
+      {
+        "concept": "ai",
+        "similarity": 0.8245
+      },
+      {
+        "concept": "llama3",
+        "similarity": 0.8029
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.7947
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7942
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7922
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.7811
+      }
+    ],
+    "open source": [
+      {
+        "concept": "openai",
+        "similarity": 0.8741
+      },
+      {
+        "concept": "openai agents sdk",
+        "similarity": 0.8356
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.827
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.7991
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7968
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7968
+      }
+    ],
+    "openai": [
+      {
+        "concept": "openai agents sdk",
+        "similarity": 0.8849
+      },
+      {
+        "concept": "open source",
+        "similarity": 0.8741
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.8236
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7894
+      },
+      {
+        "concept": "fastapi",
+        "similarity": 0.7841
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7813
+      }
+    ],
+    "openai agents sdk": [
+      {
+        "concept": "openai",
+        "similarity": 0.8849
+      },
+      {
+        "concept": "open source",
+        "similarity": 0.8356
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.7911
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.7778
+      },
+      {
+        "concept": "agent frameworks",
+        "similarity": 0.7698
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.7596
+      }
+    ],
+    "privacy": [
+      {
+        "concept": "ai",
+        "similarity": 0.8253
+      },
+      {
+        "concept": "ai-sovereignty",
+        "similarity": 0.7962
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7948
+      },
+      {
+        "concept": "data-sovereignty",
+        "similarity": 0.79
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7897
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.7811
+      }
+    ],
+    "prompt-engineering": [
+      {
+        "concept": "ai",
+        "similarity": 0.8133
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8032
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7923
+      },
+      {
+        "concept": "react",
+        "similarity": 0.7839
+      },
+      {
+        "concept": "ai integration",
+        "similarity": 0.7748
+      },
+      {
+        "concept": "transformers",
+        "similarity": 0.7634
+      }
+    ],
+    "python": [
+      {
+        "concept": "ai",
+        "similarity": 0.8843
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8436
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8369
+      },
+      {
+        "concept": "transformers",
+        "similarity": 0.8183
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.8171
+      },
+      {
+        "concept": "django",
+        "similarity": 0.8104
+      }
+    ],
+    "quantization": [
+      {
+        "concept": "ai",
+        "similarity": 0.7914
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7622
+      },
+      {
+        "concept": "machine learning",
+        "similarity": 0.7552
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.7505
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7501
+      },
+      {
+        "concept": "ai integration",
+        "similarity": 0.7429
+      }
+    ],
+    "rag": [
+      {
+        "concept": "ai",
+        "similarity": 0.8271
+      },
+      {
+        "concept": "rust",
+        "similarity": 0.8082
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8068
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8062
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.8033
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.795
+      }
+    ],
+    "react": [
+      {
+        "concept": "ai",
+        "similarity": 0.8429
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8036
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8019
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.7972
+      },
+      {
+        "concept": "ai integration",
+        "similarity": 0.7956
+      },
+      {
+        "concept": "transformers",
+        "similarity": 0.795
+      }
+    ],
+    "reinforcement-learning": [
+      {
+        "concept": "ai",
+        "similarity": 0.8227
+      },
+      {
+        "concept": "machine learning",
+        "similarity": 0.8212
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.7943
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7885
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7872
+      },
+      {
+        "concept": "rust",
+        "similarity": 0.7776
+      }
+    ],
+    "rlhf": [
+      {
+        "concept": "ai",
+        "similarity": 0.7997
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7796
+      },
+      {
+        "concept": "agent frameworks",
+        "similarity": 0.7771
+      },
+      {
+        "concept": "llm",
+        "similarity": 0.7708
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7569
+      },
+      {
+        "concept": "llama3",
+        "similarity": 0.7491
+      }
+    ],
+    "rust": [
+      {
+        "concept": "ai",
+        "similarity": 0.865
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8425
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.835
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.817
+      },
+      {
+        "concept": "machine learning",
+        "similarity": 0.8111
+      },
+      {
+        "concept": "rag",
+        "similarity": 0.8082
+      }
+    ],
+    "sentence-transformers": [
+      {
+        "concept": "transformers",
+        "similarity": 0.9046
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.7795
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7549
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7477
+      },
+      {
+        "concept": "python",
+        "similarity": 0.7459
+      },
+      {
+        "concept": "prompt-engineering",
+        "similarity": 0.7454
+      }
+    ],
+    "sovereign-ai": [
+      {
+        "concept": "ai-sovereignty",
+        "similarity": 0.9332
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.8724
+      },
+      {
+        "concept": "data-sovereignty",
+        "similarity": 0.867
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.8401
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8401
+      },
+      {
+        "concept": "ai integration",
+        "similarity": 0.8143
+      }
+    ],
+    "transformers": [
+      {
+        "concept": "sentence-transformers",
+        "similarity": 0.9046
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.8613
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8297
+      },
+      {
+        "concept": "python",
+        "similarity": 0.8183
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8178
+      },
+      {
+        "concept": "ai-agents",
+        "similarity": 0.8039
+      }
+    ],
+    "tutorial": [
+      {
+        "concept": "ai",
+        "similarity": 0.9151
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.8983
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.8556
+      },
+      {
+        "concept": "ai integration",
+        "similarity": 0.8458
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.8436
+      },
+      {
+        "concept": "rust",
+        "similarity": 0.8425
+      }
+    ],
+    "typescript": [
+      {
+        "concept": "ai",
+        "similarity": 0.8132
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7996
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7884
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.7786
+      },
+      {
+        "concept": "rust",
+        "similarity": 0.775
+      },
+      {
+        "concept": "react",
+        "similarity": 0.7669
+      }
+    ],
+    "vector databases": [
+      {
+        "concept": "ai",
+        "similarity": 0.8035
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.7976
+      },
+      {
+        "concept": "data science",
+        "similarity": 0.7967
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7936
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7846
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.7801
+      }
+    ],
+    "vibe coding": [
+      {
+        "concept": "ai",
+        "similarity": 0.7664
+      },
+      {
+        "concept": "ai development",
+        "similarity": 0.7479
+      },
+      {
+        "concept": "web development",
+        "similarity": 0.7381
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.7347
+      },
+      {
+        "concept": "content generation",
+        "similarity": 0.7242
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.7219
+      }
+    ],
+    "web development": [
+      {
+        "concept": "ai development",
+        "similarity": 0.9082
+      },
+      {
+        "concept": "ai",
+        "similarity": 0.8779
+      },
+      {
+        "concept": "tutorial",
+        "similarity": 0.8556
+      },
+      {
+        "concept": "architecture",
+        "similarity": 0.8401
+      },
+      {
+        "concept": "content generation",
+        "similarity": 0.8201
+      },
+      {
+        "concept": "data science",
+        "similarity": 0.8183
+      }
+    ]
+  },
+  "reranked_hypotheses": [
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "docker",
+        "web development"
+      ],
+      "priority": 0.6346,
+      "rationale": "'docker' and 'web development' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7692,
+      "title": "Bridging docker and web development"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "ai development"
+      ],
+      "priority": 0.6311,
+      "rationale": "'quantization' and 'ai development' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7622,
+      "title": "Bridging quantization and ai development"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "next.js",
+        "nlp"
+      ],
+      "priority": 0.6277,
+      "rationale": "'next.js' and 'nlp' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7553,
+      "title": "Bridging next.js and nlp"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "next.js",
+        "kubernetes"
+      ],
+      "priority": 0.6221,
+      "rationale": "'next.js' and 'kubernetes' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7441,
+      "title": "Bridging next.js and kubernetes"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "sovereign-ai"
+      ],
+      "priority": 0.6206,
+      "rationale": "'quantization' and 'sovereign-ai' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7411,
+      "title": "Bridging quantization and sovereign-ai"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "content generation"
+      ],
+      "priority": 0.6162,
+      "rationale": "'quantization' and 'content generation' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7324,
+      "title": "Bridging quantization and content generation"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "next.js",
+        "content generation"
+      ],
+      "priority": 0.6156,
+      "rationale": "'next.js' and 'content generation' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7312,
+      "title": "Bridging next.js and content generation"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "docker",
+        "embeddings"
+      ],
+      "priority": 0.6149,
+      "rationale": "'docker' and 'embeddings' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7298,
+      "title": "Bridging docker and embeddings"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "next.js",
+        "embeddings"
+      ],
+      "priority": 0.6145,
+      "rationale": "'next.js' and 'embeddings' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.729,
+      "title": "Bridging next.js and embeddings"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "nlp"
+      ],
+      "priority": 0.6127,
+      "rationale": "'quantization' and 'nlp' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7254,
+      "title": "Bridging quantization and nlp"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "kubernetes"
+      ],
+      "priority": 0.6085,
+      "rationale": "'quantization' and 'kubernetes' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7171,
+      "title": "Bridging quantization and kubernetes"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "web development"
+      ],
+      "priority": 0.6079,
+      "rationale": "'quantization' and 'web development' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7158,
+      "title": "Bridging quantization and web development"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "chromadb"
+      ],
+      "priority": 0.6069,
+      "rationale": "'quantization' and 'chromadb' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7137,
+      "title": "Bridging quantization and chromadb"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "reinforcement-learning"
+      ],
+      "priority": 0.6058,
+      "rationale": "'quantization' and 'reinforcement-learning' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7116,
+      "title": "Bridging quantization and reinforcement-learning"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "docker",
+        "openai agents sdk"
+      ],
+      "priority": 0.6052,
+      "rationale": "'docker' and 'openai agents sdk' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7105,
+      "title": "Bridging docker and openai agents sdk"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "open source"
+      ],
+      "priority": 0.6045,
+      "rationale": "'quantization' and 'open source' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.709,
+      "title": "Bridging quantization and open source"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "embeddings"
+      ],
+      "priority": 0.604,
+      "rationale": "'quantization' and 'embeddings' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.708,
+      "title": "Bridging quantization and embeddings"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "rag"
+      ],
+      "priority": 0.6039,
+      "rationale": "'quantization' and 'rag' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7079,
+      "title": "Bridging quantization and rag"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "docker",
+        "agent frameworks"
+      ],
+      "priority": 0.6027,
+      "rationale": "'docker' and 'agent frameworks' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7055,
+      "title": "Bridging docker and agent frameworks"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "next.js",
+        "openai agents sdk"
+      ],
+      "priority": 0.6021,
+      "rationale": "'next.js' and 'openai agents sdk' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7041,
+      "title": "Bridging next.js and openai agents sdk"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "local-inference"
+      ],
+      "priority": 0.6,
+      "rationale": "'quantization' and 'local-inference' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.7,
+      "title": "Bridging quantization and local-inference"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "docker",
+        "reinforcement-learning"
+      ],
+      "priority": 0.5992,
+      "rationale": "'docker' and 'reinforcement-learning' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.6984,
+      "title": "Bridging docker and reinforcement-learning"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "agent frameworks"
+      ],
+      "priority": 0.5989,
+      "rationale": "'quantization' and 'agent frameworks' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.6978,
+      "title": "Bridging quantization and agent frameworks"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "mcp"
+      ],
+      "priority": 0.5985,
+      "rationale": "'quantization' and 'mcp' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.697,
+      "title": "Bridging quantization and mcp"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "docker",
+        "nlp"
+      ],
+      "priority": 0.5976,
+      "rationale": "'docker' and 'nlp' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.6951,
+      "title": "Bridging docker and nlp"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "docker",
+        "local-first-ai"
+      ],
+      "priority": 0.5976,
+      "rationale": "'docker' and 'local-first-ai' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.6952,
+      "title": "Bridging docker and local-first-ai"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "transformers"
+      ],
+      "priority": 0.5962,
+      "rationale": "'quantization' and 'transformers' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.6924,
+      "title": "Bridging quantization and transformers"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "gpu-offload"
+      ],
+      "priority": 0.5957,
+      "rationale": "'quantization' and 'gpu-offload' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.6914,
+      "title": "Bridging quantization and gpu-offload"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "next.js"
+      ],
+      "priority": 0.5947,
+      "rationale": "'quantization' and 'next.js' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.6895,
+      "title": "Bridging quantization and next.js"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "local-first-ai"
+      ],
+      "priority": 0.5927,
+      "rationale": "'quantization' and 'local-first-ai' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.6855,
+      "title": "Bridging quantization and local-first-ai"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "docker",
+        "gpu-offload"
+      ],
+      "priority": 0.5849,
+      "rationale": "'docker' and 'gpu-offload' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.6698,
+      "title": "Bridging docker and gpu-offload"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "docker",
+        "quantization"
+      ],
+      "priority": 0.5795,
+      "rationale": "'docker' and 'quantization' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.659,
+      "title": "Bridging docker and quantization"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "local-first"
+      ],
+      "priority": 0.5773,
+      "rationale": "'quantization' and 'local-first' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.6546,
+      "title": "Bridging quantization and local-first"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "openai agents sdk"
+      ],
+      "priority": 0.5732,
+      "rationale": "'quantization' and 'openai agents sdk' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.6464,
+      "title": "Bridging quantization and openai agents sdk"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "docker",
+        "local-inference"
+      ],
+      "priority": 0.5728,
+      "rationale": "'docker' and 'local-inference' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.6456,
+      "title": "Bridging docker and local-inference"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "next.js",
+        "gpu-offload"
+      ],
+      "priority": 0.5707,
+      "rationale": "'next.js' and 'gpu-offload' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.6413,
+      "title": "Bridging next.js and gpu-offload"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "memory",
+        "agent"
+      ],
+      "priority": 0.45,
+      "rationale": "strong concepts, weak direct link in corpus",
+      "semantic_similarity": 0.0,
+      "title": "Synthesizing memory with agent"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "local-ai"
+      ],
+      "priority": 0.25,
+      "rationale": "'quantization' and 'local-ai' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.0,
+      "title": "Bridging quantization and local-ai"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "knowledge graphs"
+      ],
+      "priority": 0.25,
+      "rationale": "'quantization' and 'knowledge graphs' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.0,
+      "title": "Bridging quantization and knowledge graphs"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "quantization",
+        "sovereign ai"
+      ],
+      "priority": 0.25,
+      "rationale": "'quantization' and 'sovereign ai' are both well-covered topics but never co-developed in a single post.",
+      "semantic_similarity": 0.0,
+      "title": "Bridging quantization and sovereign ai"
+    }
+  ],
+  "schema_version": "1.0",
+  "semantic_gaps": [
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai",
+        "data science"
+      ],
+      "gap_score": 0.8783,
+      "similarity": 0.8783
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai",
+        "web development"
+      ],
+      "gap_score": 0.8779,
+      "similarity": 0.8779
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai",
+        "local ai"
+      ],
+      "gap_score": 0.8768,
+      "similarity": 0.8768
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "openai",
+        "open source"
+      ],
+      "gap_score": 0.8741,
+      "similarity": 0.8741
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai",
+        "sovereign-ai"
+      ],
+      "gap_score": 0.8724,
+      "similarity": 0.8724
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai-agents",
+        "ai development"
+      ],
+      "gap_score": 0.8677,
+      "similarity": 0.8677
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "sovereign-ai",
+        "data-sovereignty"
+      ],
+      "gap_score": 0.867,
+      "similarity": 0.867
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai",
+        "rust"
+      ],
+      "gap_score": 0.865,
+      "similarity": 0.865
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai",
+        "ai-sovereignty"
+      ],
+      "gap_score": 0.8639,
+      "similarity": 0.8639
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "machine learning",
+        "ai development"
+      ],
+      "gap_score": 0.8626,
+      "similarity": 0.8626
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai",
+        "transformers"
+      ],
+      "gap_score": 0.8613,
+      "similarity": 0.8613
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai development",
+        "architecture"
+      ],
+      "gap_score": 0.86,
+      "similarity": 0.86
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "local ai",
+        "local llms"
+      ],
+      "gap_score": 0.8571,
+      "similarity": 0.8571
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "tutorial",
+        "web development"
+      ],
+      "gap_score": 0.8556,
+      "similarity": 0.8556
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai",
+        "llama3"
+      ],
+      "gap_score": 0.85,
+      "similarity": 0.85
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai-agents",
+        "architecture"
+      ],
+      "gap_score": 0.8482,
+      "similarity": 0.8482
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "tutorial",
+        "ai integration"
+      ],
+      "gap_score": 0.8458,
+      "similarity": 0.8458
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "python",
+        "ai development"
+      ],
+      "gap_score": 0.8436,
+      "similarity": 0.8436
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "tutorial",
+        "architecture"
+      ],
+      "gap_score": 0.8436,
+      "similarity": 0.8436
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai development",
+        "data science"
+      ],
+      "gap_score": 0.8435,
+      "similarity": 0.8435
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai",
+        "cuda"
+      ],
+      "gap_score": 0.8434,
+      "similarity": 0.8434
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai",
+        "react"
+      ],
+      "gap_score": 0.8429,
+      "similarity": 0.8429
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "tutorial",
+        "rust"
+      ],
+      "gap_score": 0.8425,
+      "similarity": 0.8425
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "local-inference",
+        "local-first-ai"
+      ],
+      "gap_score": 0.8423,
+      "similarity": 0.8423
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai-agents",
+        "tutorial"
+      ],
+      "gap_score": 0.8416,
+      "similarity": 0.8416
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "tutorial",
+        "machine learning"
+      ],
+      "gap_score": 0.841,
+      "similarity": 0.841
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "local ai",
+        "ai development"
+      ],
+      "gap_score": 0.8403,
+      "similarity": 0.8403
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai-agents",
+        "sovereign-ai"
+      ],
+      "gap_score": 0.8401,
+      "similarity": 0.8401
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "sovereign-ai",
+        "ai development"
+      ],
+      "gap_score": 0.8401,
+      "similarity": 0.8401
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "web development",
+        "architecture"
+      ],
+      "gap_score": 0.8401,
+      "similarity": 0.8401
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "local-inference",
+        "local-first"
+      ],
+      "gap_score": 0.8384,
+      "similarity": 0.8384
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "llama3",
+        "llm"
+      ],
+      "gap_score": 0.8379,
+      "similarity": 0.8379
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "python",
+        "tutorial"
+      ],
+      "gap_score": 0.8369,
+      "similarity": 0.8369
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai",
+        "nlp"
+      ],
+      "gap_score": 0.8369,
+      "similarity": 0.8369
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai",
+        "content generation"
+      ],
+      "gap_score": 0.8361,
+      "similarity": 0.8361
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "open source",
+        "openai agents sdk"
+      ],
+      "gap_score": 0.8356,
+      "similarity": 0.8356
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai development",
+        "content generation"
+      ],
+      "gap_score": 0.8354,
+      "similarity": 0.8354
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai",
+        "kubernetes"
+      ],
+      "gap_score": 0.8351,
+      "similarity": 0.8351
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "ai-sovereignty",
+        "ai development"
+      ],
+      "gap_score": 0.8351,
+      "similarity": 0.8351
+    },
+    {
+      "co_occurrence_norm": 0.0,
+      "connects": [
+        "rust",
+        "ai development"
+      ],
+      "gap_score": 0.835,
+      "similarity": 0.835
+    }
+  ],
+  "top_semantic_gap": {
+    "co_occurrence_norm": 0.0,
+    "connects": [
+      "ai",
+      "data science"
+    ],
+    "gap_score": 0.8783,
+    "similarity": 0.8783
+  }
+}

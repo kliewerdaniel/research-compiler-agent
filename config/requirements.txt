@@ -1,0 +1,4 @@
+pyyaml>=6.0
+networkx>=3.0
+# Model passes only (optional, requires a local OpenAI-compatible server):
+# openai>=1.0

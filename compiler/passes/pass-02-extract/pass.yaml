@@ -1,0 +1,8 @@
+id: pass-02-extract
+name: Knowledge Extraction
+produces: knowledge-extraction-ir
+consumes: [markdown-ir]
+entrypoint: run.py
+deterministic: true
+model_required: false
+description: Heuristically extract per-article concepts, entities, technologies, repos, code artifacts, and future research questions (reproducible; model pass augments).

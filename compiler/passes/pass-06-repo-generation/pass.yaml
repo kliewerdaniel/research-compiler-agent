@@ -1,0 +1,8 @@
+id: pass-06-repo-generation
+name: Repository Generation
+produces: repo-generation-ir
+consumes: [research-generation-ir]
+entrypoint: run.py
+deterministic: false
+model_required: true
+description: For each major generated idea, decide if it should become software and emit a repository scaffold (README, structure, roadmap, example code, tests).

@@ -1,0 +1,8 @@
+id: pass-05-research-generation
+name: Research Post Generation
+produces: research-generation-ir
+consumes: [gap-analysis-ir, knowledge-graph-ir, style-model-ir]
+entrypoint: run.py
+deterministic: false
+model_required: true
+description: Generate a new blog-style research artifact from a top research gap, conditioned on the style model and knowledge graph.

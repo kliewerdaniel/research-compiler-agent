@@ -1,0 +1,1509 @@
+{
+  "affinity_gaps": [
+    {
+      "a": "memory",
+      "b": "agent",
+      "co_occurrence": 0,
+      "signal": "strong concepts, weak direct link in corpus"
+    }
+  ],
+  "candidate_hypotheses": [
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "memory",
+        "agent"
+      ],
+      "priority": 0.9,
+      "rationale": "strong concepts, weak direct link in corpus",
+      "title": "Synthesizing memory with agent"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "machine learning",
+        "reinforcement-learning"
+      ],
+      "priority": 0.5,
+      "rationale": "'machine learning' and 'reinforcement-learning' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging machine learning and reinforcement-learning"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "machine learning",
+        "knowledge-graphs"
+      ],
+      "priority": 0.5,
+      "rationale": "'machine learning' and 'knowledge-graphs' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging machine learning and knowledge-graphs"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "machine learning",
+        "mcp"
+      ],
+      "priority": 0.5,
+      "rationale": "'machine learning' and 'mcp' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging machine learning and mcp"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "machine learning",
+        "prompt-engineering"
+      ],
+      "priority": 0.5,
+      "rationale": "'machine learning' and 'prompt-engineering' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging machine learning and prompt-engineering"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "machine learning",
+        "local-first-ai"
+      ],
+      "priority": 0.5,
+      "rationale": "'machine learning' and 'local-first-ai' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging machine learning and local-first-ai"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "machine learning",
+        "local-ai"
+      ],
+      "priority": 0.5,
+      "rationale": "'machine learning' and 'local-ai' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging machine learning and local-ai"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "machine learning",
+        "knowledge graph"
+      ],
+      "priority": 0.5,
+      "rationale": "'machine learning' and 'knowledge graph' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging machine learning and knowledge graph"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "machine learning",
+        "chromadb"
+      ],
+      "priority": 0.5,
+      "rationale": "'machine learning' and 'chromadb' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging machine learning and chromadb"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "machine learning",
+        "ai-agents"
+      ],
+      "priority": 0.5,
+      "rationale": "'machine learning' and 'ai-agents' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging machine learning and ai-agents"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "machine learning",
+        "gpu-offload"
+      ],
+      "priority": 0.5,
+      "rationale": "'machine learning' and 'gpu-offload' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging machine learning and gpu-offload"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "machine learning",
+        "llama3"
+      ],
+      "priority": 0.5,
+      "rationale": "'machine learning' and 'llama3' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging machine learning and llama3"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "machine learning",
+        "local-inference"
+      ],
+      "priority": 0.5,
+      "rationale": "'machine learning' and 'local-inference' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging machine learning and local-inference"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "machine learning",
+        "knowledge-graph"
+      ],
+      "priority": 0.5,
+      "rationale": "'machine learning' and 'knowledge-graph' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging machine learning and knowledge-graph"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "machine learning",
+        "kubernetes"
+      ],
+      "priority": 0.5,
+      "rationale": "'machine learning' and 'kubernetes' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging machine learning and kubernetes"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "knowledge-graphs"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'knowledge-graphs' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and knowledge-graphs"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "rlhf"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'rlhf' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and rlhf"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "content generation"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'content generation' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and content generation"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "prompt-engineering"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'prompt-engineering' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and prompt-engineering"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "local-first-ai"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'local-first-ai' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and local-first-ai"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "local-ai"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'local-ai' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and local-ai"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "knowledge graph"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'knowledge graph' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and knowledge graph"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "openai"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'openai' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and openai"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "chromadb"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'chromadb' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and chromadb"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "ai-agents"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'ai-agents' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and ai-agents"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "gpu-offload"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'gpu-offload' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and gpu-offload"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "tutorial"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'tutorial' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and tutorial"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "docker"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'docker' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and docker"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "llama3"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'llama3' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and llama3"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "nlp"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'nlp' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and nlp"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "local-inference"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'local-inference' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and local-inference"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "knowledge-graph"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'knowledge-graph' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and knowledge-graph"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "reinforcement-learning",
+        "kubernetes"
+      ],
+      "priority": 0.5,
+      "rationale": "'reinforcement-learning' and 'kubernetes' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging reinforcement-learning and kubernetes"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "knowledge-graphs",
+        "rlhf"
+      ],
+      "priority": 0.5,
+      "rationale": "'knowledge-graphs' and 'rlhf' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging knowledge-graphs and rlhf"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "knowledge-graphs",
+        "content generation"
+      ],
+      "priority": 0.5,
+      "rationale": "'knowledge-graphs' and 'content generation' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging knowledge-graphs and content generation"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "knowledge-graphs",
+        "prompt-engineering"
+      ],
+      "priority": 0.5,
+      "rationale": "'knowledge-graphs' and 'prompt-engineering' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging knowledge-graphs and prompt-engineering"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "knowledge-graphs",
+        "knowledge graph"
+      ],
+      "priority": 0.5,
+      "rationale": "'knowledge-graphs' and 'knowledge graph' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging knowledge-graphs and knowledge graph"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "knowledge-graphs",
+        "openai"
+      ],
+      "priority": 0.5,
+      "rationale": "'knowledge-graphs' and 'openai' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging knowledge-graphs and openai"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "knowledge-graphs",
+        "ai-agents"
+      ],
+      "priority": 0.5,
+      "rationale": "'knowledge-graphs' and 'ai-agents' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging knowledge-graphs and ai-agents"
+    },
+    {
+      "co_occurrence": 0,
+      "connects": [
+        "knowledge-graphs",
+        "gpu-offload"
+      ],
+      "priority": 0.5,
+      "rationale": "'knowledge-graphs' and 'gpu-offload' are both well-covered topics but never co-developed in a single post.",
+      "title": "Bridging knowledge-graphs and gpu-offload"
+    }
+  ],
+  "pair_co_occurrence_top": [
+    {
+      "count": 51,
+      "pair": [
+        "bash",
+        "python"
+      ]
+    },
+    {
+      "count": 46,
+      "pair": [
+        "ollama",
+        "python"
+      ]
+    },
+    {
+      "count": 45,
+      "pair": [
+        "bash",
+        "ollama"
+      ]
+    },
+    {
+      "count": 30,
+      "pair": [
+        "next.js",
+        "ollama"
+      ]
+    },
+    {
+      "count": 29,
+      "pair": [
+        "ai",
+        "ollama"
+      ]
+    },
+    {
+      "count": 29,
+      "pair": [
+        "ai",
+        "python"
+      ]
+    },
+    {
+      "count": 25,
+      "pair": [
+        "docker",
+        "python"
+      ]
+    },
+    {
+      "count": 25,
+      "pair": [
+        "fastapi",
+        "python"
+      ]
+    },
+    {
+      "count": 25,
+      "pair": [
+        "fastapi",
+        "ollama"
+      ]
+    },
+    {
+      "count": 24,
+      "pair": [
+        "docker",
+        "ollama"
+      ]
+    },
+    {
+      "count": 23,
+      "pair": [
+        "json",
+        "ollama"
+      ]
+    },
+    {
+      "count": 22,
+      "pair": [
+        "ai",
+        "bash"
+      ]
+    },
+    {
+      "count": 22,
+      "pair": [
+        "bash",
+        "docker"
+      ]
+    },
+    {
+      "count": 22,
+      "pair": [
+        "bash",
+        "json"
+      ]
+    },
+    {
+      "count": 22,
+      "pair": [
+        "pydantic",
+        "python"
+      ]
+    },
+    {
+      "count": 22,
+      "pair": [
+        "chromadb",
+        "ollama"
+      ]
+    },
+    {
+      "count": 20,
+      "pair": [
+        "python",
+        "yaml"
+      ]
+    },
+    {
+      "count": 19,
+      "pair": [
+        "bash",
+        "yaml"
+      ]
+    },
+    {
+      "count": 19,
+      "pair": [
+        "json",
+        "python"
+      ]
+    },
+    {
+      "count": 19,
+      "pair": [
+        "bash",
+        "fastapi"
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "unanswered_question_count": 190,
+  "unanswered_questions": [
+    {
+      "source_doc": "doc-1",
+      "source_title": "**Developing an AI-Integrated Insight Journal: Enhancing Personal Reflection through Locally Hosted Language Models**",
+      "text": "**7.4 Recommendations for Future Work**"
+    },
+    {
+      "source_doc": "doc-1",
+      "source_title": "**Developing an AI-Integrated Insight Journal: Enhancing Personal Reflection through Locally Hosted Language Models**",
+      "text": "**Future Work and Research Avenues**"
+    },
+    {
+      "source_doc": "doc-2",
+      "source_title": "![Image](/images/ComfyUI_00188_.png)",
+      "text": "**Use Existing Persona?** Choose `n` to analyze a new writing sample or `y` to use an existing persona."
+    },
+    {
+      "source_doc": "doc-2",
+      "source_title": "![Image](/images/ComfyUI_00188_.png)",
+      "text": "1. Can I use a different LLM instead of Llama 3.2?**"
+    },
+    {
+      "source_doc": "doc-2",
+      "source_title": "![Image](/images/ComfyUI_00188_.png)",
+      "text": "2. Do I need to use Jekyll for this project?**"
+    },
+    {
+      "source_doc": "doc-2",
+      "source_title": "![Image](/images/ComfyUI_00188_.png)",
+      "text": "3. Is it necessary to deploy the blog to Netlify?**"
+    },
+    {
+      "source_doc": "doc-2",
+      "source_title": "![Image](/images/ComfyUI_00188_.png)",
+      "text": "4. How accurate is the style mimicry of the generated content?**"
+    },
+    {
+      "source_doc": "doc-2",
+      "source_title": "![Image](/images/ComfyUI_00188_.png)",
+      "text": "5. Can I generate content in languages other than English?**"
+    },
+    {
+      "source_doc": "doc-4",
+      "source_title": "Building a Full-Stack Application with Django and React: A Step-by-Step Guide",
+      "text": "ollama generate llama3.2 \"Hello, how are you?\""
+    },
+    {
+      "source_doc": "doc-6",
+      "source_title": "GhostWriter: Your AI-Powered Sidekick for Exceptional Writing",
+      "text": "Ready to elevate your writing?** Follow the installation steps above, and embark on a journey to create exceptional content effortlessly!"
+    },
+    {
+      "source_doc": "doc-9",
+      "source_title": "Building a Data Annotation Platform Company from Scratch: A Comprehensive Guide",
+      "text": "**5.1 Define Product Requirements and Roadmap**"
+    },
+    {
+      "source_doc": "doc-10",
+      "source_title": "**RLHF-Lab**",
+      "text": "**Next Steps**"
+    },
+    {
+      "source_doc": "doc-10",
+      "source_title": "**RLHF-Lab**",
+      "text": "Next Steps for Further Development"
+    },
+    {
+      "source_doc": "doc-11",
+      "source_title": "**RLHF-Lab Business Plan**",
+      "text": "**Product Development Roadmap**"
+    },
+    {
+      "source_doc": "doc-14",
+      "source_title": "Building an Enhanced Persona Generator and Responder with Python and OpenAI",
+      "text": "if input(\"\\nNo persona loaded. Generate new one? (y/n): \").lower() == 'y':"
+    },
+    {
+      "source_doc": "doc-14",
+      "source_title": "Building an Enhanced Persona Generator and Responder with Python and OpenAI",
+      "text": "if input(\"Try again? (y/n): \").lower() != 'y':"
+    },
+    {
+      "source_doc": "doc-14",
+      "source_title": "Building an Enhanced Persona Generator and Responder with Python and OpenAI",
+      "text": "if input(\"\\nExport response to Markdown? (y/n): \").lower() == 'y':"
+    },
+    {
+      "source_doc": "doc-14",
+      "source_title": "Building an Enhanced Persona Generator and Responder with Python and OpenAI",
+      "text": "if input(\"\\nGenerate another response with current persona? (y/n): \").lower() != 'y':"
+    },
+    {
+      "source_doc": "doc-14",
+      "source_title": "Building an Enhanced Persona Generator and Responder with Python and OpenAI",
+      "text": "if input(\"\\nStart over with a different persona? (y/n): \").lower() != 'y':"
+    },
+    {
+      "source_doc": "doc-19",
+      "source_title": "Guide to Building an AI-Powered Customer Support Chatbot Using Swarm",
+      "text": "Technical Support Agent: Understood. It's possible that your password needs to be reset. Would you like me to guide you through the password reset process?"
+    },
+    {
+      "source_doc": "doc-22",
+      "source_title": "Building a Personalized AI Assistant with LangChain: A Starting Point for Your Next NLP Project",
+      "text": "*\"How can I reset my account password?\"*"
+    },
+    {
+      "source_doc": "doc-22",
+      "source_title": "Building a Personalized AI Assistant with LangChain: A Starting Point for Your Next NLP Project",
+      "text": "*\"What is the return policy for defective products?\"*"
+    },
+    {
+      "source_doc": "doc-23",
+      "source_title": "Comprehensive Guide to Refactoring a Django Project for Enhanced Persona Management",
+      "text": "const url = personaId ? `/api/personas/${personaId}/` : '/api/personas/';"
+    },
+    {
+      "source_doc": "doc-23",
+      "source_title": "Comprehensive Guide to Refactoring a Django Project for Enhanced Persona Management",
+      "text": "const method = personaId ? 'put' : 'post';"
+    },
+    {
+      "source_doc": "doc-26",
+      "source_title": "Building the Future of AI: A Unified Framework for Reinforcement Learning, Retrieval-Augmented Generation, and Persona Modeling",
+      "text": "Practical Next Steps for a More Robust System"
+    },
+    {
+      "source_doc": "doc-26",
+      "source_title": "Building the Future of AI: A Unified Framework for Reinforcement Learning, Retrieval-Augmented Generation, and Persona Modeling",
+      "text": "\"user_query\":\"How to structure my RL project?\""
+    },
+    {
+      "source_doc": "doc-30",
+      "source_title": "![Image](/images/ComfyUI_00191_.png)",
+      "text": "**10. Next Steps**"
+    },
+    {
+      "source_doc": "doc-41",
+      "source_title": "Building an AI-Powered Filename Generator Chrome Extension",
+      "text": "What features would you like to see added? Let me know in the comments!"
+    },
+    {
+      "source_doc": "doc-43",
+      "source_title": "Building a Custom AI Agent Framework with Next.js and Ollama",
+      "text": "What tasks would you automate with your custom agent framework?"
+    },
+    {
+      "source_doc": "doc-43",
+      "source_title": "Building a Custom AI Agent Framework with Next.js and Ollama",
+      "text": "Want to explore more advanced agent patterns and LLM applications? Follow our blog for more tutorials and insights into the world of AI development.*"
+    },
+    {
+      "source_doc": "doc-44",
+      "source_title": "Building an AI-Powered Next.js Application with Mastra and Ollama",
+      "text": "const response = await fetch(`https://api.search.com?q=${encodeURIComponent(query)}`, {"
+    },
+    {
+      "source_doc": "doc-45",
+      "source_title": "Building a High-Performance Quiz Platform with Next.js and Firebase",
+      "text": "{Object.keys(scores).length > 0 ? ("
+    },
+    {
+      "source_doc": "doc-45",
+      "source_title": "Building a High-Performance Quiz Platform with Next.js and Firebase",
+      "text": "{uploading ? 'Uploading...' : 'Upload Quiz'}"
+    },
+    {
+      "source_doc": "doc-46",
+      "source_title": "Building an AI-Powered Next.js Application with Custom Agent Framework, and Ollama",
+      "text": "return `Error: ${error instanceof Error ? error.message : 'Unknown error'}`;"
+    },
+    {
+      "source_doc": "doc-47",
+      "source_title": "Building Intelligent AI Agents with Local Privacy",
+      "text": "const template = PROMPTS[domain]?.[type] || PROMPTS.general[type];"
+    },
+    {
+      "source_doc": "doc-47",
+      "source_title": "Building Intelligent AI Agents with Local Privacy",
+      "text": "const res = await fetch(`http://localhost:3001/api/weather?location=${encodeURIComponent(location)}`);"
+    },
+    {
+      "source_doc": "doc-47",
+      "source_title": "Building Intelligent AI Agents with Local Privacy",
+      "text": "Ready to build your own local reasoning agent? Clone the repository and start experimenting:"
+    },
+    {
+      "source_doc": "doc-48",
+      "source_title": "**Mastering Burn for AI: Training, Saving, and Running Local Models in Rust**",
+      "text": "**Next Steps: Leveling Up Your Burn Skills**"
+    },
+    {
+      "source_doc": "doc-48",
+      "source_title": "**Mastering Burn for AI: Training, Saving, and Running Local Models in Rust**",
+      "text": "m.add_function(wrap_pyfunction!(multiply_matrices, m)?)?;"
+    },
+    {
+      "source_doc": "doc-48",
+      "source_title": "**Mastering Burn for AI: Training, Saving, and Running Local Models in Rust**",
+      "text": "What’s happening here?"
+    },
+    {
+      "source_doc": "doc-50",
+      "source_title": "Architectural Synthesis: Integrating OpenAI's Agents SDK with Ollama",
+      "text": "echo \"Would you like to initialize Ollama models? (y/n)\""
+    },
+    {
+      "source_doc": "doc-50",
+      "source_title": "Architectural Synthesis: Integrating OpenAI's Agents SDK with Ollama",
+      "text": "query \"Stacks[0].Outputs[?OutputKey=='ECRRepository'].OutputValue\" \\"
+    },
+    {
+      "source_doc": "doc-50",
+      "source_title": "Architectural Synthesis: Integrating OpenAI's Agents SDK with Ollama",
+      "text": "query \"Stacks[0].Outputs[?OutputKey=='APIEndpoint'].OutputValue\" \\"
+    },
+    {
+      "source_doc": "doc-50",
+      "source_title": "Architectural Synthesis: Integrating OpenAI's Agents SDK with Ollama",
+      "text": "?api_key=YOUR_API_KEY"
+    },
+    {
+      "source_doc": "doc-50",
+      "source_title": "Architectural Synthesis: Integrating OpenAI's Agents SDK with Ollama",
+      "text": "{\"role\": \"user\", \"content\": \"Hello, who are you?\"}"
+    },
+    {
+      "source_doc": "doc-50",
+      "source_title": "Architectural Synthesis: Integrating OpenAI's Agents SDK with Ollama",
+      "text": "response, history = chat(\"Hello! What can you tell me about artificial intelligence?\", history)"
+    },
+    {
+      "source_doc": "doc-50",
+      "source_title": "Architectural Synthesis: Integrating OpenAI's Agents SDK with Ollama",
+      "text": "response, history = chat(\"What are some practical applications?\", history)"
+    },
+    {
+      "source_doc": "doc-50",
+      "source_title": "Architectural Synthesis: Integrating OpenAI's Agents SDK with Ollama",
+      "text": "result = run_research_agent(\"What are the latest advancements in fusion energy?\")"
+    },
+    {
+      "source_doc": "doc-54",
+      "source_title": "Comprehensive Guide to Simulacra01",
+      "text": "messages=[{\"role\": \"user\", \"content\": \"What is 2+2?\"}],"
+    },
+    {
+      "source_doc": "doc-54",
+      "source_title": "Comprehensive Guide to Simulacra01",
+      "text": "sections = re.split(r'(?:\\n\\s*){2,}|(?:#{1,6}\\s+[^\\n]+\\n)', text)"
+    },
+    {
+      "source_doc": "doc-55",
+      "source_title": "Beyond Research: Building a Modern AI Knowledge Companion",
+      "text": "1. Which academic fields are most relevant to this query?"
+    },
+    {
+      "source_doc": "doc-55",
+      "source_title": "Beyond Research: Building a Modern AI Knowledge Companion",
+      "text": "2. What specific academic databases should be consulted? (arXiv, PubMed, etc.)"
+    },
+    {
+      "source_doc": "doc-55",
+      "source_title": "Beyond Research: Building a Modern AI Knowledge Companion",
+      "text": "3. What are the key search terms for academic literature?"
+    },
+    {
+      "source_doc": "doc-55",
+      "source_title": "Beyond Research: Building a Modern AI Knowledge Companion",
+      "text": "4. Are there specific authors or institutions known for work in this area?"
+    },
+    {
+      "source_doc": "doc-55",
+      "source_title": "Beyond Research: Building a Modern AI Knowledge Companion",
+      "text": "5. What time period is most relevant for this research?"
+    },
+    {
+      "source_doc": "doc-55",
+      "source_title": "Beyond Research: Building a Modern AI Knowledge Companion",
+      "text": "1. What industry sectors are relevant to this query?"
+    },
+    {
+      "source_doc": "doc-55",
+      "source_title": "Beyond Research: Building a Modern AI Knowledge Companion",
+      "text": "2. What specific companies should be researched?"
+    },
+    {
+      "source_doc": "doc-55",
+      "source_title": "Beyond Research: Building a Modern AI Knowledge Companion",
+      "text": "3. What types of business data would be most valuable (financial, strategic, competitive)?"
+    },
+    {
+      "source_doc": "doc-56",
+      "source_title": "Building a Local Document Processing Pipeline with LLMs: The Ultimate Architecture",
+      "text": "if (!confirm('Are you sure you want to delete this document?')) return;"
+    },
+    {
+      "source_doc": "doc-56",
+      "source_title": "Building a Local Document Processing Pipeline with LLMs: The Ultimate Architecture",
+      "text": "{loading ? ("
+    },
+    {
+      "source_doc": "doc-56",
+      "source_title": "Building a Local Document Processing Pipeline with LLMs: The Ultimate Architecture",
+      "text": "{documents.length === 0 ? ("
+    },
+    {
+      "source_doc": "doc-56",
+      "source_title": "Building a Local Document Processing Pipeline with LLMs: The Ultimate Architecture",
+      "text": "color={doc.file_type === 'pdf' ? 'error' : 'primary'}"
+    },
+    {
+      "source_doc": "doc-56",
+      "source_title": "Building a Local Document Processing Pipeline with LLMs: The Ultimate Architecture",
+      "text": "{isUploading ? <CircularProgress size={24} /> : 'Upload Document'}"
+    },
+    {
+      "source_doc": "doc-58",
+      "source_title": "Building Large-Scale AI Agents: A Deep-Dive Guide for Experienced Engineers",
+      "text": "sentence_end_pattern = r'[.!?]\\s+'"
+    },
+    {
+      "source_doc": "doc-58",
+      "source_title": "Building Large-Scale AI Agents: A Deep-Dive Guide for Experienced Engineers",
+      "text": "text = re.sub(r'\\*\\*(.*?)\\*\\*', r'\\1', text)"
+    },
+    {
+      "source_doc": "doc-58",
+      "source_title": "Building Large-Scale AI Agents: A Deep-Dive Guide for Experienced Engineers",
+      "text": "text = re.sub(r'__(.*?)__', r'\\1', text)"
+    },
+    {
+      "source_doc": "doc-58",
+      "source_title": "Building Large-Scale AI Agents: A Deep-Dive Guide for Experienced Engineers",
+      "text": "text = re.sub(r'_(.*?)_', r'\\1', text)"
+    },
+    {
+      "source_doc": "doc-58",
+      "source_title": "Building Large-Scale AI Agents: A Deep-Dive Guide for Experienced Engineers",
+      "text": "text = re.sub(r'```.*?\\n(.*?)```', r'\\1', text, flags=re.DOTALL)"
+    },
+    {
+      "source_doc": "doc-61",
+      "source_title": "![Image](/images/ComfyUI_00197_.png)",
+      "text": "• What do you like most about the platform?"
+    },
+    {
+      "source_doc": "doc-61",
+      "source_title": "![Image](/images/ComfyUI_00197_.png)",
+      "text": "• What challenges have you faced while using the platform?"
+    },
+    {
+      "source_doc": "doc-61",
+      "source_title": "![Image](/images/ComfyUI_00197_.png)",
+      "text": "• What additional features would you like to see?"
+    },
+    {
+      "source_doc": "doc-61",
+      "source_title": "![Image](/images/ComfyUI_00197_.png)",
+      "text": "• How likely are you to recommend the platform to a friend?"
+    },
+    {
+      "source_doc": "doc-61",
+      "source_title": "![Image](/images/ComfyUI_00197_.png)",
+      "text": "• **Frequency**: How often does this feedback appear? If multiple users report the same issue, it’s more urgent to address."
+    },
+    {
+      "source_doc": "doc-61",
+      "source_title": "![Image](/images/ComfyUI_00197_.png)",
+      "text": "• **Impact**: Does this feedback address a fundamental usability problem or a minor inconvenience? Focus on high-impact issues first."
+    },
+    {
+      "source_doc": "doc-62",
+      "source_title": "Building a Personalized AI Learning System with Local LLMs",
+      "text": "isDragActive ? 'border-blue-500 bg-blue-50' : 'border-gray-300'"
+    },
+    {
+      "source_doc": "doc-62",
+      "source_title": "Building a Personalized AI Learning System with Local LLMs",
+      "text": "{uploading ? ("
+    },
+    {
+      "source_doc": "doc-62",
+      "source_title": "Building a Personalized AI Learning System with Local LLMs",
+      "text": ") : isDragActive ? ("
+    },
+    {
+      "source_doc": "doc-62",
+      "source_title": "Building a Personalized AI Learning System with Local LLMs",
+      "text": "uploadStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'"
+    },
+    {
+      "source_doc": "doc-68",
+      "source_title": "**Build a Server-Rendered AI-Powered Page with Next.js + LLMs**",
+      "text": "router.push(`/?prompt=${encodeURIComponent(prompt)}`);"
+    },
+    {
+      "source_doc": "doc-68",
+      "source_title": "**Build a Server-Rendered AI-Powered Page with Next.js + LLMs**",
+      "text": "`handleSubmit`: Prevents default form submission, and instead uses `router.push()` to update the URL query string (`/?prompt=...`)"
+    },
+    {
+      "source_doc": "doc-68",
+      "source_title": "**Build a Server-Rendered AI-Powered Page with Next.js + LLMs**",
+      "text": "Using the query string (`/?prompt=...`) to pass user input:"
+    },
+    {
+      "source_doc": "doc-68",
+      "source_title": "**Build a Server-Rendered AI-Powered Page with Next.js + LLMs**",
+      "text": "\"What is server-side rendering?\""
+    },
+    {
+      "source_doc": "doc-69",
+      "source_title": "First thought. How do I install this?",
+      "text": "Do I have any idea what I did? Did I FUBAR this app? Let's see if this will work."
+    },
+    {
+      "source_doc": "doc-69",
+      "source_title": "First thought. How do I install this?",
+      "text": "So tootaloo I am going to try this again in a new post. This post is my shit post. I keep saying that. The next one will actually work right???"
+    },
+    {
+      "source_doc": "doc-71",
+      "source_title": "Mind Map AI Checklist",
+      "text": "Pending Tasks and Next Steps"
+    },
+    {
+      "source_doc": "doc-71",
+      "source_title": "Mind Map AI Checklist",
+      "text": "{stats?.num_nodes || 0}"
+    },
+    {
+      "source_doc": "doc-71",
+      "source_title": "Mind Map AI Checklist",
+      "text": "{stats?.num_edges || 0}"
+    },
+    {
+      "source_doc": "doc-71",
+      "source_title": "Mind Map AI Checklist",
+      "text": "{stats?.density?.toFixed(3) || '0.000'}"
+    },
+    {
+      "source_doc": "doc-71",
+      "source_title": "Mind Map AI Checklist",
+      "text": "export_response = requests.get(f\"{API_BASE}/api/export?format=graphml\")"
+    },
+    {
+      "source_doc": "doc-71",
+      "source_title": "Mind Map AI Checklist",
+      "text": "assert '<?xml' in content"
+    },
+    {
+      "source_doc": "doc-71",
+      "source_title": "Mind Map AI Checklist",
+      "text": "cursor.execute(\"SELECT id FROM notes WHERE hash = ?\", (content_hash,))"
+    },
+    {
+      "source_doc": "doc-74",
+      "source_title": "Learn Programming for Free: Complete YouTube Roadmap to Master Computer Science (2025)",
+      "text": "Learn Programming for Free: Complete YouTube Roadmap to Master Computer Science (2025)"
+    },
+    {
+      "source_doc": "doc-74",
+      "source_title": "Learn Programming for Free: Complete YouTube Roadmap to Master Computer Science (2025)",
+      "text": "The Complete Self-Learning Roadmap: From Zero to Job-Ready"
+    },
+    {
+      "source_doc": "doc-74",
+      "source_title": "Learn Programming for Free: Complete YouTube Roadmap to Master Computer Science (2025)",
+      "text": "Your Next Steps: Start Today"
+    },
+    {
+      "source_doc": "doc-74",
+      "source_title": "Learn Programming for Free: Complete YouTube Roadmap to Master Computer Science (2025)",
+      "text": "Solved your first LeetCode problem? Celebrate."
+    },
+    {
+      "source_doc": "doc-74",
+      "source_title": "Learn Programming for Free: Complete YouTube Roadmap to Master Computer Science (2025)",
+      "text": "Built your first API? Celebrate."
+    },
+    {
+      "source_doc": "doc-74",
+      "source_title": "Learn Programming for Free: Complete YouTube Roadmap to Master Computer Science (2025)",
+      "text": "Fixed a bug after 3 hours? Celebrate."
+    },
+    {
+      "source_doc": "doc-74",
+      "source_title": "Learn Programming for Free: Complete YouTube Roadmap to Master Computer Science (2025)",
+      "text": "Solution:** Compare yourself to your past self. Are you better than last month? That's the only comparison that matters."
+    },
+    {
+      "source_doc": "doc-74",
+      "source_title": "Learn Programming for Free: Complete YouTube Roadmap to Master Computer Science (2025)",
+      "text": "Q: How long does it realistically take to become job-ready as a self-taught programmer?**"
+    },
+    {
+      "source_doc": "doc-77",
+      "source_title": "Reddit's Most Haunting Project: Meet the Man Coding His Murdered Friend Back to Life",
+      "text": "Where does the person end and the character begin? Does it matter if the vulnerability is real?"
+    },
+    {
+      "source_doc": "doc-78",
+      "source_title": "The Rise of Vibe Coding: When AI Agents Go to War",
+      "text": "This isn't the future of coding. This **is** the future of coding. The question is: are you vibing with it?"
+    },
+    {
+      "source_doc": "doc-78",
+      "source_title": "The Rise of Vibe Coding: When AI Agents Go to War",
+      "text": "What's your current vibe coding setup? Have you tried tool switching? Drop your thoughts in the comments - let's keep this conversation going."
+    },
+    {
+      "source_doc": "doc-79",
+      "source_title": "Document-Driven Development: How I Built a Production Blog Without Writing a Single Line of Code By Hand",
+      "text": "Okay, so it's... basic. Very basic. But does it work? Let's click around and—nope. Only the landing page loads. Every other link leads to a 404."
+    },
+    {
+      "source_doc": "doc-80",
+      "source_title": "The Revolution Will Be Documented: A Manifesto for AI-Assisted Software Development in the Age of Gatekeeping",
+      "text": "And honestly? That fear reveals more about the critics than it does about the methodology."
+    },
+    {
+      "source_doc": "doc-80",
+      "source_title": "The Revolution Will Be Documented: A Manifesto for AI-Assisted Software Development in the Age of Gatekeeping",
+      "text": "Q: Isn't this just making excuses for lazy coding?**"
+    },
+    {
+      "source_doc": "doc-80",
+      "source_title": "The Revolution Will Be Documented: A Manifesto for AI-Assisted Software Development in the Age of Gatekeeping",
+      "text": "Q: How do I ensure AI-generated code quality?**"
+    },
+    {
+      "source_doc": "doc-80",
+      "source_title": "The Revolution Will Be Documented: A Manifesto for AI-Assisted Software Development in the Age of Gatekeeping",
+      "text": "Q: What if I'm already a traditional developer?**"
+    },
+    {
+      "source_doc": "doc-80",
+      "source_title": "The Revolution Will Be Documented: A Manifesto for AI-Assisted Software Development in the Age of Gatekeeping",
+      "text": "Q: Doesn't this methodology take too long?**"
+    },
+    {
+      "source_doc": "doc-80",
+      "source_title": "The Revolution Will Be Documented: A Manifesto for AI-Assisted Software Development in the Age of Gatekeeping",
+      "text": "Q: How do I convince stakeholders to adopt this approach?**"
+    },
+    {
+      "source_doc": "doc-81",
+      "source_title": "Let's Start With What We're Not Saying Out Loud",
+      "text": "Is AI really democratizing opportunity, or just creating new forms of inequality?**"
+    },
+    {
+      "source_doc": "doc-81",
+      "source_title": "Let's Start With What We're Not Saying Out Loud",
+      "text": "How do I learn AI skills if I'm already overwhelmed?**"
+    },
+    {
+      "source_doc": "doc-81",
+      "source_title": "Let's Start With What We're Not Saying Out Loud",
+      "text": "What if I'm too old/too far behind/too non-technical?**"
+    },
+    {
+      "source_doc": "doc-81",
+      "source_title": "Let's Start With What We're Not Saying Out Loud",
+      "text": "Don't we lose something important when we automate work?**"
+    },
+    {
+      "source_doc": "doc-81",
+      "source_title": "Let's Start With What We're Not Saying Out Loud",
+      "text": "How do we protect workers during this transition?**"
+    },
+    {
+      "source_doc": "doc-82",
+      "source_title": "Capacity Review: The AI Workflow Engine That Actually Understands Vibe Coding",
+      "text": "And honestly? That's the kind of tool worth paying for."
+    },
+    {
+      "source_doc": "doc-82",
+      "source_title": "Capacity Review: The AI Workflow Engine That Actually Understands Vibe Coding",
+      "text": "And if after a month you're not seeing value? Cancel the subscription. No tool works for everyone, and that's fine."
+    },
+    {
+      "source_doc": "doc-82",
+      "source_title": "Capacity Review: The AI Workflow Engine That Actually Understands Vibe Coding",
+      "text": "👉 [Try Capacity here](https://capacity.so/?via=daniel)"
+    },
+    {
+      "source_doc": "doc-82",
+      "source_title": "Capacity Review: The AI Workflow Engine That Actually Understands Vibe Coding",
+      "text": "Q: Is Capacity better than just using ChatGPT or Claude directly?**"
+    },
+    {
+      "source_doc": "doc-82",
+      "source_title": "Capacity Review: The AI Workflow Engine That Actually Understands Vibe Coding",
+      "text": "Q: Can I use my own local LLMs with Capacity?**"
+    },
+    {
+      "source_doc": "doc-82",
+      "source_title": "Capacity Review: The AI Workflow Engine That Actually Understands Vibe Coding",
+      "text": "Q: How long does it take to see ROI?**"
+    },
+    {
+      "source_doc": "doc-82",
+      "source_title": "Capacity Review: The AI Workflow Engine That Actually Understands Vibe Coding",
+      "text": "Q: Can non-technical team members use Capacity?**"
+    },
+    {
+      "source_doc": "doc-82",
+      "source_title": "Capacity Review: The AI Workflow Engine That Actually Understands Vibe Coding",
+      "text": "Q: What happens if I cancel my subscription?**"
+    },
+    {
+      "source_doc": "doc-83",
+      "source_title": "![Recursive Agent Core Architecture Diagram](/images/11052025/recursive-agent-core-architecture-diagram.png)",
+      "text": "\"What are the contraindications for beta-blockers mentioned in chapters 8 and 15?\""
+    },
+    {
+      "source_doc": "doc-83",
+      "source_title": "![Recursive Agent Core Architecture Diagram](/images/11052025/recursive-agent-core-architecture-diagram.png)",
+      "text": "Q: Can I use this for non-PDF documents?**"
+    },
+    {
+      "source_doc": "doc-83",
+      "source_title": "![Recursive Agent Core Architecture Diagram](/images/11052025/recursive-agent-core-architecture-diagram.png)",
+      "text": "Q: How do I handle multiple textbooks in one system?**"
+    },
+    {
+      "source_doc": "doc-83",
+      "source_title": "![Recursive Agent Core Architecture Diagram](/images/11052025/recursive-agent-core-architecture-diagram.png)",
+      "text": "Q: What if I want to generate flashcards or quizzes?**"
+    },
+    {
+      "source_doc": "doc-83",
+      "source_title": "![Recursive Agent Core Architecture Diagram](/images/11052025/recursive-agent-core-architecture-diagram.png)",
+      "text": "Q: Can I run this on a laptop without a GPU?**"
+    },
+    {
+      "source_doc": "doc-83",
+      "source_title": "![Recursive Agent Core Architecture Diagram](/images/11052025/recursive-agent-core-architecture-diagram.png)",
+      "text": "Q: How do I update the database when I get new lecture notes?**"
+    },
+    {
+      "source_doc": "doc-83",
+      "source_title": "![Recursive Agent Core Architecture Diagram](/images/11052025/recursive-agent-core-architecture-diagram.png)",
+      "text": "Q: What about handwritten notes or scanned PDFs?**"
+    },
+    {
+      "source_doc": "doc-84",
+      "source_title": "![AI collaboration partnership with MCP protocol]( /images/11052025/ai-collaboration-partnership-mcp-protocol.jpg )",
+      "text": "So here we are. The tools are installed. The protocol is live. What now?"
+    },
+    {
+      "source_doc": "doc-87",
+      "source_title": "The Complete Guide to VSCode for Free Technical Blogging: From Setup to Publication",
+      "text": "Your Next Steps"
+    },
+    {
+      "source_doc": "doc-87",
+      "source_title": "The Complete Guide to VSCode for Free Technical Blogging: From Setup to Publication",
+      "text": "Ready to break free?** Your cursor awaits."
+    },
+    {
+      "source_doc": "doc-90",
+      "source_title": "Building and Evaluating a Local-First Research Assistant with GraphRAG and vero-eval",
+      "text": "Conclusion and Next Steps"
+    },
+    {
+      "source_doc": "doc-90",
+      "source_title": "Building and Evaluating a Local-First Research Assistant with GraphRAG and vero-eval",
+      "text": "Recommended Next Steps:"
+    },
+    {
+      "source_doc": "doc-90",
+      "source_title": "Building and Evaluating a Local-First Research Assistant with GraphRAG and vero-eval",
+      "text": "Questions? Open an issue in the repo or reach out to the community."
+    },
+    {
+      "source_doc": "doc-91",
+      "source_title": "Critical Next.js RCE Vulnerability: CVE-2025-66478 Security Guide",
+      "text": "**[Next.js Authentication Best Practices](https://www.youtube.com/watch?v=N_sUsq_y10U)** - Modern patterns for securing Server Actions"
+    },
+    {
+      "source_doc": "doc-96",
+      "source_title": "Infinity, Paradox, and Autonomous Architects: Why Anthropomorphizing AI is the Ultimate Roast",
+      "text": "And honestly? That's the funniest joke of all."
+    },
+    {
+      "source_doc": "doc-97",
+      "source_title": "From Specifications to Code: Inside SpecGen's Agentic Revolution",
+      "text": "Future Roadmap"
+    },
+    {
+      "source_doc": "doc-97",
+      "source_title": "From Specifications to Code: Inside SpecGen's Agentic Revolution",
+      "text": "Ready to transform your specifications into code? Try SpecGen today and experience the future of software development.*"
+    },
+    {
+      "source_doc": "doc-100",
+      "source_title": "Memory Preservation Invariants: A New Class of Autonomous Agent Architectures",
+      "text": "How to quantify \"identity\" metrics beyond semantic similarity?"
+    },
+    {
+      "source_doc": "doc-103",
+      "source_title": "Building a Dynamic Persona-Based Mixture-of-Experts RAG System",
+      "text": "Implementation Roadmap"
+    },
+    {
+      "source_doc": "doc-104",
+      "source_title": "From Scaffolding to Reality: Building the Dynamic Persona MOE RAG System",
+      "text": "Enhanced Roadmap"
+    },
+    {
+      "source_doc": "doc-109",
+      "source_title": "🚀 Dynamic Persona MoE RAG Implementation Complete - January 28, 2026",
+      "text": "🚀 Next Steps and Future Development"
+    },
+    {
+      "source_doc": "doc-111",
+      "source_title": "Audible Data Transmission: When Humans Become the Codec",
+      "text": "[Link to NotebookLM Explainer](https://notebooklm.google.com/notebook/9c304b94-95af-4a74-957a-7c69ae082a81?artifactId=aec673c2-2fb1-42d3-a1e2-812fdaf97ea7)"
+    },
+    {
+      "source_doc": "doc-113",
+      "source_title": "Building This Blog: A Technical Deep Dive into My Next.js AI-Powered Publishing Platform",
+      "text": "const reader = response.body?.getReader();"
+    },
+    {
+      "source_doc": "doc-114",
+      "source_title": "Building a Knowledge-Sharing Chatbot: Turn Expertise Into an AI That Anyone Can Query",
+      "text": "What's Next"
+    },
+    {
+      "source_doc": "doc-115",
+      "source_title": "Building a Cognitive Graph AI Application: A Comprehensive Guide",
+      "text": "onChunk?: (chunk: string) => void"
+    },
+    {
+      "source_doc": "doc-115",
+      "source_title": "Building a Cognitive Graph AI Application: A Comprehensive Guide",
+      "text": "onComplete?: (response: CognitiveResponse) => void"
+    },
+    {
+      "source_doc": "doc-115",
+      "source_title": "Building a Cognitive Graph AI Application: A Comprehensive Guide",
+      "text": "onError?: (error: Error) => void"
+    },
+    {
+      "source_doc": "doc-115",
+      "source_title": "Building a Cognitive Graph AI Application: A Comprehensive Guide",
+      "text": "options.onChunk?.(data.token)"
+    },
+    {
+      "source_doc": "doc-115",
+      "source_title": "Building a Cognitive Graph AI Application: A Comprehensive Guide",
+      "text": "options.onComplete?.({"
+    },
+    {
+      "source_doc": "doc-115",
+      "source_title": "Building a Cognitive Graph AI Application: A Comprehensive Guide",
+      "text": "options.onError?.(error as Error)"
+    },
+    {
+      "source_doc": "doc-115",
+      "source_title": "Building a Cognitive Graph AI Application: A Comprehensive Guide",
+      "text": "personas_used: context.activePersonas?.map(p => p.persona_name),"
+    },
+    {
+      "source_doc": "doc-120",
+      "source_title": "Architecture as Autonomy",
+      "text": "1. **Can you inspect the model you're using?** Not just its outputs — its weights, its training methodology, its alignment process?"
+    },
+    {
+      "source_doc": "doc-120",
+      "source_title": "Architecture as Autonomy",
+      "text": "2. **Do you control the execution path?** When you send a query, do you know exactly what happens to it, where it goes, and what other systems it touches?"
+    },
+    {
+      "source_doc": "doc-120",
+      "source_title": "Architecture as Autonomy",
+      "text": "3. **Is your data yours?** Your prompts, your documents, your embeddings — do they live on hardware you control, or on someone else's servers?"
+    },
+    {
+      "source_doc": "doc-120",
+      "source_title": "Architecture as Autonomy",
+      "text": "The canvas is code. The brush is your architecture. The painting?"
+    },
+    {
+      "source_doc": "doc-121",
+      "source_title": "The Sovereignty Manifesto: Why Local Data is the Last Bastion of Human Agency",
+      "text": "The Technical Roadmap"
+    },
+    {
+      "source_doc": "doc-121",
+      "source_title": "The Sovereignty Manifesto: Why Local Data is the Last Bastion of Human Agency",
+      "text": "The Economic Roadmap"
+    },
+    {
+      "source_doc": "doc-121",
+      "source_title": "The Sovereignty Manifesto: Why Local Data is the Last Bastion of Human Agency",
+      "text": "The Policy Roadmap"
+    },
+    {
+      "source_doc": "doc-121",
+      "source_title": "The Sovereignty Manifesto: Why Local Data is the Last Bastion of Human Agency",
+      "text": "The Cultural Roadmap"
+    },
+    {
+      "source_doc": "doc-121",
+      "source_title": "The Sovereignty Manifesto: Why Local Data is the Last Bastion of Human Agency",
+      "text": "Now, the question is: what will you do?"
+    },
+    {
+      "source_doc": "doc-122",
+      "source_title": "The Architecture of Autonomy: Corporate AI vs. Sovereign AI",
+      "text": "1. Where does inference run?**"
+    },
+    {
+      "source_doc": "doc-122",
+      "source_title": "The Architecture of Autonomy: Corporate AI vs. Sovereign AI",
+      "text": "2. Is the execution path auditable?**"
+    },
+    {
+      "source_doc": "doc-122",
+      "source_title": "The Architecture of Autonomy: Corporate AI vs. Sovereign AI",
+      "text": "3. Who owns the memory?**"
+    },
+    {
+      "source_doc": "doc-122",
+      "source_title": "The Architecture of Autonomy: Corporate AI vs. Sovereign AI",
+      "text": "4. Is the evaluation loop embedded or external?**"
+    },
+    {
+      "source_doc": "doc-122",
+      "source_title": "The Architecture of Autonomy: Corporate AI vs. Sovereign AI",
+      "text": "5. Does your stack reflect your values?**"
+    },
+    {
+      "source_doc": "doc-123",
+      "source_title": "SOVEREIGN: The Unified Architecture",
+      "text": "Every design choice in SOVEREIGN is downstream of one question: who is this system for?"
+    },
+    {
+      "source_doc": "doc-124",
+      "source_title": "Synthetic Intelligence: Why \"Emergence\" is Just Math and Why Your Data Should Stay Local",
+      "text": "Roadmap"
+    },
+    {
+      "source_doc": "doc-124",
+      "source_title": "Synthetic Intelligence: Why \"Emergence\" is Just Math and Why Your Data Should Stay Local",
+      "text": "question=\"What are the key challenges in scaling renewable energy adoption?\","
+    },
+    {
+      "source_doc": "doc-126",
+      "source_title": "Qwen-Scope: Turning Sparse Features into Development Tools for Large Language Models",
+      "text": "What can this model do?"
+    },
+    {
+      "source_doc": "doc-126",
+      "source_title": "Qwen-Scope: Turning Sparse Features into Development Tools for Large Language Models",
+      "text": "What do you want it to do—and how precisely can you make it happen?"
+    },
+    {
+      "source_doc": "doc-126",
+      "source_title": "Qwen-Scope: Turning Sparse Features into Development Tools for Large Language Models",
+      "text": "https://qwen.ai/blog?id=qwen-scope"
+    },
+    {
+      "source_doc": "doc-127",
+      "source_title": "> *\"High-quality data is not a precondition for intelligence — it is an expression of it.\"*",
+      "text": "Phased Roadmap"
+    },
+    {
+      "source_doc": "doc-130",
+      "source_title": "objective05-exec: Giving Your Local Intelligence System Hands",
+      "text": "let registry = ToolRegistry::load_from_directory(&config.agent.tool_discovery_path)?;"
+    },
+    {
+      "source_doc": "doc-130",
+      "source_title": "objective05-exec: Giving Your Local Intelligence System Hands",
+      "text": "let signals = self.collect_signals().await?;"
+    },
+    {
+      "source_doc": "doc-130",
+      "source_title": "objective05-exec: Giving Your Local Intelligence System Hands",
+      "text": "let evaluations = self.evaluator.evaluate_batch(&signals, &self.registry)?;"
+    },
+    {
+      "source_doc": "doc-130",
+      "source_title": "objective05-exec: Giving Your Local Intelligence System Hands",
+      "text": "let results = self.executor.execute_batch(actions, self.config.execution.max_action_budget_per_cycle).await?;"
+    },
+    {
+      "source_doc": "doc-130",
+      "source_title": "objective05-exec: Giving Your Local Intelligence System Hands",
+      "text": "let config = Config::from_file(&config_path)?;"
+    },
+    {
+      "source_doc": "doc-130",
+      "source_title": "objective05-exec: Giving Your Local Intelligence System Hands",
+      "text": "let runtime = agent::runtime::AgentRuntime::new(config)?;"
+    },
+    {
+      "source_doc": "doc-130",
+      "source_title": "objective05-exec: Giving Your Local Intelligence System Hands",
+      "text": "runtime.run_forever().await?;"
+    },
+    {
+      "source_doc": "doc-133",
+      "source_title": "Project Proposal: SovereignSpec — Local-First Spec-Driven Development",
+      "text": "[Spec Kit Documentation: What is SDD?](https://github.github.io/spec-kit/concepts/sdd.html) — Core methodology documentation"
+    },
+    {
+      "source_doc": "doc-137",
+      "source_title": "Autoresearch Loops and Differentiated Intelligence",
+      "text": "[Autonomous Agent Research](https://arxiv.org/search/?query=autonomous+agents&searchtype=all) — arXiv search"
+    },
+    {
+      "source_doc": "doc-137",
+      "source_title": "Autoresearch Loops and Differentiated Intelligence",
+      "text": "[Expert Fine-Tuning Research](https://arxiv.org/search/?query=expert+fine+tuning&searchtype=all) — arXiv search"
+    },
+    {
+      "source_doc": "doc-137",
+      "source_title": "Autoresearch Loops and Differentiated Intelligence",
+      "text": "[Autoresearch Loops Research](https://arxiv.org/search/?query=autoresearch&searchtype=all) — arXiv search"
+    },
+    {
+      "source_doc": "doc-139",
+      "source_title": "The Model Is Not the Product: Residual State, Compiled Agents, and Optimization Loops",
+      "text": "\"What can the model do?\""
+    },
+    {
+      "source_doc": "doc-139",
+      "source_title": "The Model Is Not the Product: Residual State, Compiled Agents, and Optimization Loops",
+      "text": "\"What kind of loop are you running, and what does it optimize for?\""
+    },
+    {
+      "source_doc": "doc-139",
+      "source_title": "The Model Is Not the Product: Residual State, Compiled Agents, and Optimization Loops",
+      "text": "7. Harris & Slivkins. *Should You Use Your LLM to Explore or Exploit?*. [arXiv:2502.00225](https://arxiv.org/abs/2502.00225), 2026"
+    },
+    {
+      "source_doc": "doc-139",
+      "source_title": "The Model Is Not the Product: Residual State, Compiled Agents, and Optimization Loops",
+      "text": "[Compounding Intelligence Research](https://arxiv.org/search/?query=compounding+intelligence&searchtype=all) — arXiv search"
+    },
+    {
+      "source_doc": "doc-145",
+      "source_title": "Sovereign AI Architecture: Building Compounding Intelligence",
+      "text": "Part 9: What's Next"
+    }
+  ],
+  "under_explored_concepts": []
+}
