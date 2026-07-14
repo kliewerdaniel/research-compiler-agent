@@ -13,10 +13,14 @@
 - [x] **semantic gap ranking via Ollama embeddings (`pass-03b-embeddings`)** —
   proposed by this ledger on 2026-07-14 14:31 as `semantic-gap-ranker`, then
   implemented. The compiler grew the capability it asked for.
+- [x] **incremental re-compilation** — dependency-aware caching is now the
+  default. Editing a blog post re-runs only `pass-01-parse` (and downstream if
+  its output changed); editing a pass's code re-runs that pass + dependents but
+  leaves siblings cached. A hash of each pass's code is recorded with its
+  artifact. Force full rebuild with `--no-cache`.
 
 ## Backlog (next proposals)
 
-- [ ] incremental re-compilation with dependency tracking (proposed by Orinth run)
 - [ ] `contradicts` edge mining from opposing corpus claims
 - [ ] a self-writing pass generator (compiler emits its own next pass directory)
 

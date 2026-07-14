@@ -46,7 +46,8 @@ def main(argv=None) -> int:
     ap.add_argument("--embed-model", default=os.environ.get("KC_EMBED_MODEL"))
     ap.add_argument("--timeout", type=float, default=float(os.environ.get("KC_TIMEOUT", "900")))
     ap.add_argument("--max-tokens", type=int, default=int(os.environ.get("KC_MAX_TOKENS", "8192")))
-    ap.add_argument("--incremental", action="store_true")
+    ap.add_argument("--no-cache", action="store_true",
+                    help="Disable incremental re-compilation; rebuild all passes.")
     ap.add_argument("--only", default=None, help="Run only this pass id.")
     ap.add_argument("--resume", action="store_true")
     args = ap.parse_args(argv)
@@ -72,7 +73,7 @@ def main(argv=None) -> int:
     compiler = Compiler(registry, build_dir)
     summary = compiler.run(
         target=args.target, dry_run=args.dry, local=args.local, port=args.port,
-        model=args.model, incremental=args.incremental or args.resume,
+        model=args.model, incremental=not args.no_cache or args.resume,
         only=args.only, embed_model=args.embed_model,
         timeout=args.timeout, max_tokens=args.max_tokens,
     )

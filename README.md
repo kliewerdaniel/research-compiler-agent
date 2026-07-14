@@ -94,6 +94,22 @@ python -m compiler.generation.assemble build
 python -m compiler.orchestration.loop --source corpus/source_blog_posts --build build
 ```
 
+### Incremental re-compilation
+
+Runs are **incremental by default** — the compiler only re-executes passes
+whose inputs (or whose own code) changed since the last run:
+
+- Editing a source blog post invalidates `pass-01-parse` only; downstream
+  passes stay cached unless the parse output actually changed.
+- Editing a pass's `run.py` / `prompt.md` / `pass.yaml` invalidates that pass
+  and its dependents, but leaves siblings cached (a hash of the pass code is
+  recorded alongside each artifact).
+- Cached passes print `≡`; re-run passes print `✓`; skipped (no model)
+  print `·`.
+
+Force a full rebuild with `--no-cache`. Pass `--dry` to print the plan
+without executing.
+
 > **Interpreter note.** The model passes import `openai`, which lives in the
 > Python 3.11 venv at `~/.hermes/hermes-agent/venv`. `run.sh` uses that venv
 > automatically. If you run `python` directly, use that venv's binary so

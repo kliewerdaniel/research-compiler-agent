@@ -234,6 +234,7 @@ def main() -> int:
     meta = write_artifact(
         build_dir, "markdown-ir", ir, pass_id="pass-01-parse",
         source_artifacts=md_files, schema_id="markdown-ir",
+        pass_dir=os.path.dirname(os.path.abspath(__file__)),
     )
     ev = evaluate_artifact(
         "markdown-ir", ir, meta,

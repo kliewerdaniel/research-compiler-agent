@@ -218,6 +218,7 @@ def main() -> int:
     meta = write_artifact(
         build_dir, "knowledge-extraction-ir", ir, pass_id="pass-02-extract",
         source_artifacts=["markdown-ir"], schema_id="knowledge-extraction-ir",
+        pass_dir=os.path.dirname(os.path.abspath(__file__)),
     )
     ev = evaluate_artifact(
         "knowledge-extraction-ir", ir, meta,

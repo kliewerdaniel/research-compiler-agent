@@ -196,6 +196,7 @@ def main() -> int:
         build_dir, "knowledge-graph-ir", ir, pass_id="pass-04-knowledge-graph",
         source_artifacts=["knowledge-extraction-ir", "gap-analysis-ir"],
         schema_id="knowledge-graph-ir",
+        pass_dir=os.path.dirname(os.path.abspath(__file__)),
     )
     ev = evaluate_artifact(
         "knowledge-graph-ir", ir, meta,

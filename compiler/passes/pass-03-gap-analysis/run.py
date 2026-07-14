@@ -185,6 +185,7 @@ def main() -> int:
         build_dir, "gap-analysis-ir", ir, pass_id="pass-03-gap-analysis",
         source_artifacts=["knowledge-extraction-ir", "style-model-ir"],
         schema_id="gap-analysis-ir",
+        pass_dir=os.path.dirname(os.path.abspath(__file__)),
     )
     ev = evaluate_artifact(
         "gap-analysis-ir", ir, meta,

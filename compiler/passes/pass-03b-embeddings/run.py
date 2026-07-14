@@ -241,6 +241,7 @@ def main() -> int:
     meta = write_artifact(
         build_dir, PRODUCES, ir, pass_id="pass-03b-embeddings",
         source_artifacts=CONSUMES, schema_id=PRODUCES,
+        pass_dir=os.path.dirname(os.path.abspath(__file__)),
     )
     ev = evaluate_artifact(
         PRODUCES, ir, meta,

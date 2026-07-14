@@ -161,6 +161,7 @@ def main() -> int:
     meta = write_artifact(
         build_dir, "style-model-ir", model, pass_id="pass-01b-style",
         source_artifacts=["markdown-ir"], schema_id="style-model-ir",
+        pass_dir=os.path.dirname(os.path.abspath(__file__)),
     )
     ev = evaluate_artifact(
         "style-model-ir", model, meta,

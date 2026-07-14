@@ -34,7 +34,12 @@ import sys
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
 
-from .artifacts import ArtifactStore, artifact_exists, source_hashes_of
+from .artifacts import (
+    ArtifactStore,
+    artifact_exists,
+    source_hashes_of,
+    pass_code_hash,
+)
 from .registry import PassDeclaration, PassRegistry
 
 try:
@@ -171,7 +176,7 @@ class Compiler:
         local: bool = False,
         port: int = 8080,
         model: Optional[str] = None,
-        incremental: bool = False,
+        incremental: bool = True,
         only: Optional[str] = None,
         embed_model: Optional[str] = None,
         timeout: float = 900.0,
@@ -204,9 +209,11 @@ class Compiler:
                 record["reason"] = "dry_run"
                 plan.skipped.append(decl.id)
             elif incremental and self._is_cached(decl):
-                # Inputs unchanged since this artifact was produced -> reuse.
+                # Incremental re-compilation: inputs (and pass code) unchanged
+                # since this artifact was produced -> reuse it. This is the
+                # default behaviour; pass --no-cache to force a full rebuild.
                 record["status"] = "cached"
-                record["reason"] = "inputs unchanged"
+                record["reason"] = "inputs + pass code unchanged"
             elif os.path.isfile(entry) and not decl.model_required:
                 # Deterministic pass with a real entrypoint — run it directly.
                 ok = self._exec_pass(entry)
@@ -246,11 +253,15 @@ class Compiler:
         return summary
 
     def _is_cached(self, decl: "PassDeclaration") -> bool:
-        """True if ``decl.produces`` exists and its inputs are unchanged.
+        """True if ``decl.produces`` exists and its inputs AND pass code are unchanged.
 
         Compares the current content hashes of the consumed artifacts against
-        the ``source_hashes`` recorded when the artifact was produced. If any
-        consumed artifact is missing or its hash differs, the cache is invalid.
+        the ``source_hashes`` recorded when the artifact was produced, AND the
+        current hash of the producer pass's code (run.py, prompt.md, pass.yaml)
+        against the ``pass_code_hash`` recorded at production time. Either a
+        changed input OR a changed pass implementation invalidates the cache —
+        this is the heart of incremental re-compilation: edit a blog post or
+        edit a pass, and only the affected subgraph re-runs.
         """
         if not self.store.has(decl.produces):
             return False
@@ -263,6 +274,12 @@ class Compiler:
         # present + matching for every consumed artifact
         for c in decl.consumes:
             if recorded.get(c) != current.get(c):
+                return False
+        # pass code changed? (logic edit invalidates the cached artifact)
+        rec_code = meta.get("pass_code_hash")
+        if rec_code is not None:
+            cur_code = pass_code_hash(decl.path)
+            if cur_code and cur_code != rec_code:
                 return False
         return True
 
@@ -316,8 +333,13 @@ class Compiler:
                 timeout=300,
                 env=self._pass_env(),
             )
+            if result.returncode != 0:
+                sys.stderr.write(
+                    f"[pass failed] {entry}\n{result.stderr[-2000:]}\n"
+                )
             return result.returncode == 0
-        except Exception:
+        except Exception as e:  # pragma: no cover
+            sys.stderr.write(f"[pass exception] {entry}: {e}\n")
             return False
 
     def _exec_model_pass(

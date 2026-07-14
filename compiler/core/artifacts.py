@@ -97,6 +97,32 @@ def _source_dir_hash(build_dir: str) -> Optional[str]:
     return hashlib.sha256("\u0000".join(parts).encode("utf-8")).hexdigest()
 
 
+def pass_code_hash(pass_dir: str) -> str:
+    """Stable hash of a pass's executable code.
+
+    Covers every file in the pass directory (run.py, prompt.md, pass.yaml, …)
+    except the build output, so editing a pass's logic invalidates its cached
+    artifact — incremental re-compilation then re-runs that pass even if its
+    declared inputs are byte-for-byte unchanged.
+    """
+    import hashlib
+
+    if not os.path.isdir(pass_dir):
+        return ""
+    parts = []
+    for root, _dirs, files in os.walk(pass_dir):
+        for fn in sorted(files):
+            # ignore any stray build/state the pass may write inside its dir
+            if fn in ("diagnostics.json", "metadata.json", "artifact.json"):
+                continue
+            with open(os.path.join(root, fn), "rb") as fh:
+                parts.append(os.path.relpath(os.path.join(root, fn), pass_dir)
+                             + "\u0000" + fh.read().hex())
+    if not parts:
+        return ""
+    return hashlib.sha256("\u0000".join(parts).encode("utf-8")).hexdigest()
+
+
 def read_metadata(build_dir: str, artifact_type: str) -> Dict[str, Any]:
     p = os.path.join(artifact_path(build_dir, artifact_type), "metadata.json")
     if not os.path.isfile(p):
@@ -152,6 +178,7 @@ def write_artifact(
     schema_dir: str = DEFAULT_SCHEMA_DIR,
     diagnostics: Optional[Dict[str, Any]] = None,
     source_hashes: Optional[Dict[str, str]] = None,
+    pass_dir: Optional[str] = None,
 ) -> Dict[str, Any]:
     """Persist an artifact immutably.
 
@@ -180,6 +207,10 @@ def write_artifact(
         "content_hash": content_hash,
         "tool_version": "knowledge-compiler-sdk/0.1.0",
     }
+    # Record the producer pass's code hash so incremental re-compilation can
+    # detect when the *logic* changed (not just the inputs).
+    if pass_dir:
+        metadata["pass_code_hash"] = pass_code_hash(pass_dir)
     with open(
         os.path.join(artifact_path(build_dir, artifact_type), "metadata.json"),
         "w",
@@ -240,6 +271,7 @@ class ArtifactStore:
         schema_id: Optional[str] = None,
         diagnostics: Optional[Dict[str, Any]] = None,
         source_hashes: Optional[Dict[str, str]] = None,
+        pass_dir: Optional[str] = None,
     ) -> Dict[str, Any]:
         return write_artifact(
             self.build_dir,
@@ -251,6 +283,7 @@ class ArtifactStore:
             schema_dir=self.schema_dir,
             diagnostics=diagnostics,
             source_hashes=source_hashes,
+            pass_dir=pass_dir,
         )
 
     def validate(self, artifact_type: str, schema_id: Optional[str] = None):
