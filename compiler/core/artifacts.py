@@ -66,6 +66,10 @@ def source_hashes_of(build_dir: str, artifacts: List[str]) -> Dict[str, str]:
     The special name ``"source"`` refers to the staged source directory
     (``<build>/source``); its hash is computed over the concatenated canonical
     JSON of every ``.md`` file so incremental caching can detect source edits.
+
+    The special name ``"ledger"`` refers to the compiler's self-improvement
+    backlog (``agents/self_improvement.md`` at the repo root); it is hashed so
+    the pass generator re-runs whenever a backlog item is added or resolved.
     """
     out = {}
     for a in artifacts:
@@ -74,10 +78,32 @@ def source_hashes_of(build_dir: str, artifacts: List[str]) -> Dict[str, str]:
             if h is not None:
                 out[a] = h
             continue
+        if a == "ledger":
+            h = _ledger_hash(build_dir)
+            if h is not None:
+                out[a] = h
+            continue
         h = content_hash_of(build_dir, a)
         if h is not None:
             out[a] = h
     return out
+
+
+def _ledger_hash(build_dir: str) -> Optional[str]:
+    """Hash of the self-improvement backlog (``agents/self_improvement.md``).
+
+    The ledger lives at the repo root (two levels up from ``<build>``), which
+    is the same location ``compiler.run`` stages the corpus from, so the hash
+    is stable across builds.
+    """
+    import hashlib
+
+    repo = os.path.dirname(build_dir)
+    ledger = os.path.join(repo, "agents", "self_improvement.md")
+    if not os.path.isfile(ledger):
+        return None
+    with open(ledger, "rb") as fh:
+        return hashlib.sha256(fh.read()).hexdigest()
 
 
 def _source_dir_hash(build_dir: str) -> Optional[str]:

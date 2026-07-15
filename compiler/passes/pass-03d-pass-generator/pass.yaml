@@ -1,0 +1,13 @@
+id: pass-03d-pass-generator
+name: Self-Writing Pass Generator
+produces: pass-generator-ir
+consumes: [ledger]
+entrypoint: run.py
+deterministic: true
+model_required: false
+description: >
+  The compiler extends itself. Reads the self-improvement backlog in
+  agents/self_improvement.md, picks the top unresolved proposal, and scaffolds
+  a new pass directory (pass.yaml + run.py stub + prompt.md) under
+  compiler/passes/. The next build discovers the generated pass and runs it,
+  closing the loop without a human writing code.

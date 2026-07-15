@@ -21,10 +21,16 @@
 - [x] **contradiction mining (`pass-03c-contradictions`)** — mines opposing
   claims from the corpus, emits `contradicts` reasoning edges into the
   knowledge graph, and surfaces resolution topics to the generation pass.
+- [x] **self-writing pass generator (`pass-03d-pass-generator`)** — the compiler
+  reads this backlog, picks the top unresolved item, and scaffolds a runnable
+  pass directory (`pass-NN-<slug>/` with `pass.yaml`, `run.py`, `prompt.md`) into
+  `compiler/passes/`. The next build discovers and runs it. The ledger is now a
+  living work queue the compiler resolves itself.
 
 ## Backlog (next proposals)
 
-- [ ] a self-writing pass generator (compiler emits its own next pass directory)
+- [ ] a "research debt" pass that tracks posts with low `coverage`/`under_explored_concepts` and proposes consolidation posts
+- [ ] an entity-resolution pass that merges duplicate person/repo nodes in the graph (e.g. "Orinth" vs "Ornith")
 
 ---
 
@@ -66,4 +72,15 @@
 - implemented `pass-03b-embeddings` (Ollama nomic-embed-text, 768-dim, 53 concepts)
 - semantic gaps now rank by affinity vs. co-occurrence
 - `pass-05` consumes the embedding-reranked hypotheses
+
+## Cycle 2026-07-14 — self-writing pass generator shipped
+
+- implemented `pass-03d-pass-generator`: reads `## Backlog` from this ledger
+  (a `ledger` special dependency, hashed like `source`), scaffolds a runnable
+  pass dir (`pass-NN-<slug>/` with `pass.yaml`, `run.py`, `prompt.md`) into
+  `compiler/passes/`.
+- First real generation: `pass-08-a-research-debt-pass` (from the "research
+  debt" backlog item), discovered + executed on the very next build.
+- The compiler now extends itself: backlog proposal -> generated pass -> run.
+- The ledger (this file) is a living work queue the compiler resolves itself.
 - closes the loop: the capability proposed at 14:31 is now live

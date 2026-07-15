@@ -50,6 +50,13 @@ produce inspectable artifacts:
 | `pass-03-gap-analysis` | `gap-analysis-ir` | Co-occurrence gaps + 40 ranked research directions |
 | `pass-03c-contradictions` | `contradictions-ir` | **Contradiction mining.** Groups claim sentences by concept and flags opposing stances → `contradicts` reasoning edges + resolution topics |
 | `pass-04-knowledge-graph` | `knowledge-graph-ir` | **NetworkX knowledge graph** (nodes/edges, 39 gap edges, + `contradicts` edges from pass-03c) + GraphML |
+| `pass-03d-pass-generator` | `pass-generator-ir` | **Self-writing pass generator.** Reads the self-improvement backlog (`agents/self_improvement.md`), scaffolds a runnable pass dir (`pass-NN-<slug>/`) into `compiler/passes/`; the next build discovers + runs it |
+
+> **The ledger is a living work queue.** `pass-03d-pass-generator` consumes the
+> `ledger` (a special dependency hashed like `source`), so adding a `- [ ]`
+> item to `## Backlog` invalidates the generator and the *next* run materialises
+> that capability as a new pass — the compiler extends itself without a human
+> writing code.
 
 From those, the assembler renders a **research brief** for the top gap into
 `generated_research/`, and the loop appends a cycle to `agents/self_improvement.md`.

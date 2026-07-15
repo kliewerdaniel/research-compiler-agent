@@ -1,0 +1,10 @@
+id: pass-08-a-research-debt-pass
+name: a "research debt" pass that tracks posts with low `coverage`/`under_explored_concepts` and proposes consolidation posts
+produces: pass-08-a-research-debt-pass-ir
+consumes: [knowledge-extraction-ir, gap-analysis-ir]
+entrypoint: run.py
+deterministic: true
+model_required: false
+generated_by: pass-03d-pass-generator
+description: >
+  Auto-generated from the self-improvement backlog. a "research debt" pass that tracks posts with low `coverage`/`under_explored_concepts` and proposes consolidation posts
