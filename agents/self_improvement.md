@@ -18,10 +18,12 @@
   its output changed); editing a pass's code re-runs that pass + dependents but
   leaves siblings cached. A hash of each pass's code is recorded with its
   artifact. Force full rebuild with `--no-cache`.
+- [x] **contradiction mining (`pass-03c-contradictions`)** — mines opposing
+  claims from the corpus, emits `contradicts` reasoning edges into the
+  knowledge graph, and surfaces resolution topics to the generation pass.
 
 ## Backlog (next proposals)
 
-- [ ] `contradicts` edge mining from opposing corpus claims
 - [ ] a self-writing pass generator (compiler emits its own next pass directory)
 
 ---

@@ -38,6 +38,7 @@ from core import (  # noqa: E402
     write_evaluation,
     evaluate_artifact,
 )
+from core.artifacts import ArtifactStore  # noqa: E402
 
 # Map a research-gap pair to a typed edge so the graph itself encodes "what to
 # build next". These are the project's own extension points, surfaced as edges.
@@ -50,6 +51,7 @@ def _slug(s: str) -> str:
 
 def main() -> int:
     build_dir = sys.argv[1] if len(sys.argv) > 1 else os.getcwd()
+    store = ArtifactStore(build_dir)
     with open(os.path.join(build_dir, "knowledge-extraction-ir", "artifact.json"), encoding="utf-8") as fh:
         ke = json.load(fh)
     with open(os.path.join(build_dir, "gap-analysis-ir", "artifact.json"), encoding="utf-8") as fh:
@@ -143,6 +145,30 @@ def main() -> int:
                        rationale=h.get("rationale", ""))
             gap_count += 1
 
+    # --- contradiction edges (optional: from pass-03c-contradictions) --------
+    # Two posts that touch the same concept but advocate opposing stances. These
+    # become ``contradicts`` reasoning edges in the graph — a contradiction is
+    # itself a research gap (a post that resolves it).
+    contra_count = 0
+    if store.has("contradictions-ir"):
+        ctr = store.read("contradictions-ir")
+        slug_to_doc = {d["id"]: "doc:" + d["id"] for d in ke.get("articles", [])}
+        concept_slug = {v["label"].lower(): "concept:" + _slug(v["label"])
+                        for v in index.get("vocabulary", [])}
+        for e in ctr.get("contradiction_edges", []):
+            da = slug_to_doc.get(e["doc_a"])
+            db = slug_to_doc.get(e["doc_b"])
+            cnode = concept_slug.get(e["concept"])
+            if da and db and da in G and db in G:
+                G.add_edge(da, db, type="contradicts",
+                           confidence=0.85, concept=e["concept"],
+                           claim_pro=e.get("claim_pro", ""),
+                           claim_contra=e.get("claim_contra", ""))
+                contra_count += 1
+                if cnode and cnode in G:
+                    G.add_edge(da, cnode, type="asserts", confidence=0.6)
+                    G.add_edge(db, cnode, type="asserts", confidence=0.6)
+
     # --- write artifacts ------------------------------------------------------
     nodes_out = [
         {"id": n, "label": d["label"], "kind": d["kind"],
@@ -152,7 +178,8 @@ def main() -> int:
     edges_out = [
         {"source": u, "target": v, "type": e.get("type", "related_to"),
          "confidence": e.get("confidence", 0.5),
-         **{k: e[k] for k in ("co_count", "title", "rationale") if k in e}}
+         **{k: e[k] for k in ("co_count", "title", "rationale", "concept",
+                              "claim_pro", "claim_contra") if k in e}}
         for u, v, e in G.edges(data=True)
     ]
     ir = {
@@ -164,6 +191,7 @@ def main() -> int:
         "nodes": nodes_out,
         "edges": edges_out,
         "research_gap_edge_count": gap_count,
+        "contradiction_edge_count": contra_count,
         "answer": "What research should exist next? -> traverse 'gap' edges; "
                   "each is a ranked, evidence-grounded research direction.",
     }

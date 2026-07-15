@@ -1,0 +1,8 @@
+id: pass-03c-contradictions
+name: Contradiction Mining
+produces: contradictions-ir
+consumes: [knowledge-extraction-ir]
+entrypoint: run.py
+deterministic: true
+model_required: false
+description: Mine opposing claims from the corpus and emit `contradicts` reasoning edges. Groups claim sentences by shared concept and flags opposing stances using a stance lexicon, surfacing research topics that *resolve* a contradiction.

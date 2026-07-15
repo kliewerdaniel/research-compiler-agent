@@ -48,7 +48,8 @@ produce inspectable artifacts:
 | `pass-01b-style` | `style-model-ir` | **Compiled** style model (structure, lexicon, tone, themes) |
 | `pass-02-extract` | `knowledge-extraction-ir` | Per-article concepts, tech, repos, code, future questions |
 | `pass-03-gap-analysis` | `gap-analysis-ir` | Co-occurrence gaps + 40 ranked research directions |
-| `pass-04-knowledge-graph` | `knowledge-graph-ir` | **NetworkX knowledge graph** (326 nodes, 1276 edges, 39 gap edges) + GraphML |
+| `pass-03c-contradictions` | `contradictions-ir` | **Contradiction mining.** Groups claim sentences by concept and flags opposing stances → `contradicts` reasoning edges + resolution topics |
+| `pass-04-knowledge-graph` | `knowledge-graph-ir` | **NetworkX knowledge graph** (nodes/edges, 39 gap edges, + `contradicts` edges from pass-03c) + GraphML |
 
 From those, the assembler renders a **research brief** for the top gap into
 `generated_research/`, and the loop appends a cycle to `agents/self_improvement.md`.

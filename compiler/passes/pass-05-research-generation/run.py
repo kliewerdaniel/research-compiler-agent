@@ -74,6 +74,30 @@ def build_user_prompt(inputs: dict) -> str:
     style_rules = style.get("derived_rules", [])
     tone = style.get("tone_profile", {}).get("documentation_observations", [])
 
+    # Opportunistically surface top contradictions as resolution topics. A
+    # contradiction is a high-value research direction: the corpus already
+    # argues both sides, so a post that resolves it is well-grounded.
+    resolutions = []
+    ctr = inputs.get("contradictions-ir")
+    if not isinstance(ctr, dict):
+        try:
+            from core.artifacts import ArtifactStore as _AS
+            _bd = inputs.get("__build_dir__")
+            if _bd:
+                _store = _AS(_bd)
+                if _store.has("contradictions-ir"):
+                    ctr = _store.read("contradictions-ir")
+        except Exception:
+            ctr = None
+    if isinstance(ctr, dict):
+        for r in ctr.get("research_resolutions", [])[:5]:
+            resolutions.append({
+                "topic": r.get("topic"),
+                "concept": r.get("concept"),
+                "claim_pro": r.get("claim_pro"),
+                "claim_contra": r.get("claim_contra"),
+            })
+
     payload = {
         "chosen_hypothesis": top,
         "gap_ranking_source": gap_source,
@@ -81,6 +105,7 @@ def build_user_prompt(inputs: dict) -> str:
         "unanswered_questions_sample": [
             q.get("text") for q in ga.get("unanswered_questions", [])[:12]
         ],
+        "contradiction_resolutions": resolutions,
         "style_rules": style_rules,
         "tone_notes": tone,
     }

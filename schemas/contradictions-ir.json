@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {"type": "string"},
+    "concept_count": {"type": "integer"},
+    "claims_mined": {"type": "integer"},
+    "contradiction_edge_count": {"type": "integer"},
+    "contradiction_edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "concept": {"type": "string"},
+          "doc_a": {"type": "string"},
+          "doc_b": {"type": "string"},
+          "claim_pro": {"type": "string"},
+          "claim_contra": {"type": "string"},
+          "stance_pro": {"type": "string"},
+          "stance_contra": {"type": "string"},
+          "score": {"type": "number"}
+        },
+        "required": ["concept", "doc_a", "doc_b"]
+      }
+    },
+    "research_resolutions": {"type": "array", "items": {"type": "object"}},
+    "top_contradiction": {"type": ["object", "null"]}
+  },
+  "required": ["contradiction_edges", "contradiction_edge_count"]
+}
