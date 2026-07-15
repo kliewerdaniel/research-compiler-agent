@@ -3,11 +3,15 @@
 
 Reads <build>/research-generation-ir/artifact.json (produced by the model pass)
 and renders the canonical research-post template to
-generated_research/<slug>.md. If the model pass hasn't run (no --local), it
-falls back to rendering a *research brief* from the deterministic gap analysis
-so the pipeline always yields a concrete, inspectable artifact.
+generated_posts/<YYYY-MM-DD>-<slug>.md using the *full authored frontmatter*
+style of the live blog (layout: post, og:*, canonical_url, draft: false) so a
+generated post drops straight into content/blog/.
 
-Also writes a repo scaffold to generated_research/<slug>/ when
+If the model pass hasn't run (no --local), it falls back to rendering a
+*research brief* from the deterministic gap analysis so the pipeline always
+yields a concrete, inspectable artifact.
+
+Also writes a repo scaffold to generated_posts/<slug>/ when
 repo-generation-ir indicates should_build.
 """
 
@@ -16,32 +20,74 @@ from __future__ import annotations
 import json
 import os
 import sys
+from datetime import date as _date
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(_HERE))
 sys.path.insert(0, os.path.join(ROOT, "compiler"))
 
 
-def _frontmatter(post: dict) -> str:
+def _today_fm() -> str:
+    """Live-blog frontmatter date convention: MM-DD-YYYY."""
+    return _date.today().strftime("%m-%d-%Y")
+
+
+def _meta_desc(abstract: str, limit: int = 200) -> str:
+    """Meta description must be concise (SEO: <= ~155 chars is ideal; we allow
+    a little headroom). Truncate on a word boundary and elide with an ellipsis
+    so the field stays drop-in ready for the live blog."""
+    a = (abstract or "").strip()
+    if len(a) <= limit:
+        return a
+    cut = a[:limit].rsplit(" ", 1)[0]
+    return cut.rstrip(",.;: ") + "…"
+
+
+def _date_prefix() -> str:
+    """Live-blog filename / canonical convention: YYYY-MM-DD-<slug>."""
+    return _date.today().strftime("%Y-%m-%d")
+
+
+def _slugify(s: str) -> str:
+    return "".join(c if c.isalnum() or c in "-_" else "-" for c in (s or "untitled")).strip("-")
+
+
+def _frontmatter(post: dict, canonical_slug: str) -> str:
+    """Emit the FULL authored frontmatter style used by the live blog so a
+    generated post is ready to drop into content/blog/. The model supplies
+    title/slug/abstract/tags; date + canonical + image are derived here."""
+    title = post.get("title", "Untitled Research")
+    abstract = (post.get("abstract") or "").strip()
+    meta_desc = _meta_desc(abstract)
+    date_fm = post.get("date") or _today_fm()
+    image = f"/images/{canonical_slug}.png"
+    canonical = f"/blog/{_date_prefix()}-{canonical_slug}"
     fm = [
         "---",
-        f"title: \"{post.get('title', 'Untitled Research')}\"",
-        f"slug: {post.get('slug', 'untitled')}",
-        f"date: {post.get('date', '')}",
-        f"author: Research Compiler Agent",
-        f"description: {post.get('abstract', '')[:200]}",
+        "author: Daniel Kliewer",
+        f"canonical_url: {canonical}",
+        f"date: {date_fm}",
+        f"description: \"{meta_desc}\"",
+        f"image: {image}",
+        "layout: post",
+        f"title: '{title}'",
+        f"og:description: \"{meta_desc}\"",
+        f"og:image: {image}",
+        f"og:title: '{title}'",
+        "og:type: article",
+        f"og:url: {canonical}",
         "tags:",
     ]
     for t in post.get("tags", []) or []:
-        fm.append(f"- {t}")
-    fm.append("generated_by: research-compiler-agent")
-    fm.append(f"source_gap: {post.get('source_gap', '')}")
+        fm.append(f"  - {t}")
+    fm.append("draft: false")
     fm.append("---")
     return "\n".join(fm)
 
 
 def render_post(post: dict) -> str:
-    out = [_frontmatter(post), ""]
+    slug = _slugify(post.get("slug", "untitled"))
+    out = [_frontmatter(post, slug), ""]
     out.append(f"# {post.get('title', 'Untitled')}")
     out.append("")
     # Render an Abstract heading only if the post has an abstract AND its first
@@ -133,7 +179,7 @@ def render_brief(gap: dict, build_dir: str) -> dict:
 
 def main() -> int:
     build_dir = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "build")
-    out_dir = os.path.join(ROOT, "generated_research")
+    out_dir = os.path.join(ROOT, "generated_posts")
     os.makedirs(out_dir, exist_ok=True)
 
     gen_path = os.path.join(build_dir, "research-generation-ir", "artifact.json")
@@ -157,9 +203,10 @@ def main() -> int:
         post = render_brief(hypotheses[0], build_dir)
 
     md = render_post(post)
-    slug = post.get("slug", "untitled")
-    slug = "".join(c if c.isalnum() or c in "-_" else "-" for c in slug).strip("-")
-    out_file = os.path.join(out_dir, f"{slug}.md")
+    slug = _slugify(post.get("slug", "untitled"))
+    is_brief = (post.get("slug") or "").startswith("brief-")
+    fname = (f"{_date_prefix()}-{slug}.md") if not is_brief else f"{slug}.md"
+    out_file = os.path.join(out_dir, fname)
     with open(out_file, "w", encoding="utf-8") as fh:
         fh.write(md)
     print(f"wrote research post: {out_file}")

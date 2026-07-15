@@ -3959,7 +3959,3 @@ For further assistance or questions regarding the Insight Journal platform, plea
 # **End of Appendices**
 
 These supplementary materials provide the necessary resources to understand, set up, and utilize the Insight Journal platform as discussed in the dissertation. By following the provided code listings and user guides, one can replicate the platform and explore the integration of AI into personal knowledge management tools.
-
-
-
-
