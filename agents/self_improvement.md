@@ -29,12 +29,40 @@
 
 ## Backlog (next proposals)
 
-- [ ] a "research debt" pass that tracks posts with low `coverage`/`under_explored_concepts` and proposes consolidation posts
-- [ ] an entity-resolution pass that merges duplicate person/repo nodes in the graph (e.g. "Orinth" vs "Ornith")
+- [x] an entity-resolution pass that merges duplicate person/repo nodes in the graph (e.g. "Orinth" vs "Ornith") — implemented as `pass-12-an-entity-resolution`
 
 ---
 
 ## Cycle log
+
+## Cycle 2026-07-15
+
+- wired `pass-05-research-generation` to consume `research-debt-ir` (declared in
+  `CONSUMES` so the orchestrator orders pass-08 before pass-05). The model prompt
+  now embeds the `research_debt` block: `debt_score`, top 8 ranked
+  `consolidation_proposals` (deepen_post / develop_concept / consolidate_orphan),
+  and top 8 `under_explored_concepts`. Added a pivot instruction: when a proposal
+  is well-grounded in the provided graph edges, the model MAY address that debt.
+  Follows the established opportunistic-read pattern (also reads embeddings-ir /
+  contradictions-ir) so deterministic-only runs still work. Verified prompt
+  assembly against real artifacts (no model server needed); live model test
+  confirmed Orinth (:8080) consumed the `research_debt` block and pivoted to
+  repay debt — generated "Sovereign Memory Bank: Autonomous Cognitive Memory for
+  Agent Systems" by deepening thin post doc-135, quoting its consolidation
+  proposal rationale verbatim.
+- implemented `pass-12-an-entity-resolution`: reads the real `knowledge-graph-ir`,
+  finds same-kind label variants (versioned/owner-variant repos, spacing variants)
+  via a two-layer matcher (repos by project-name + edit-distance ≤2; concepts/
+  tech/persons only when identical after stripping digit-runs + plural suffix,
+  len≥6), emits `entity-resolution-ir` merge plan that `pass-04` applies.
+- convergence: 2 runs on a fresh `--no-cache` build (pass-04 builds graph →
+  pass-12 plans → next run applies), 1 run incrementally; idempotent (0 groups
+  on a clean graph). Avoided circular dependency by keeping pass-04's read
+  optional (not a hard `consumes`).
+- merged 5 real duplicates: `knowledge graph`≡`knowledge-graphs`,
+  `ggml-org/llama.cpp`≡`ggerganov/llama.cpp`, `PersonaGen`/`mindmap`/`objective`
+  versioned repos. No false merges (`ai`/`rag`/`nlp` stay distinct; concept vs
+  technology nodes of the same label are correctly kept separate).
 
 ## Cycle 2026-07-14 14:24
 

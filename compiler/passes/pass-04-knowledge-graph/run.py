@@ -169,6 +169,48 @@ def main() -> int:
                     G.add_edge(da, cnode, type="asserts", confidence=0.6)
                     G.add_edge(db, cnode, type="asserts", confidence=0.6)
 
+    # --- entity resolution (optional: from pass-12-an-entity-resolution) ----
+    # pass-12 emits duplicate LABELS (not predicted ids); here we resolve each
+    # group's labels to the actual graph nodes that carry them (only repos
+    # referenced by articles become real nodes), then merge them under the
+    # highest-degree member, rewiring edges and dropping self-loops.
+    if store.has("entity-resolution-ir"):
+        er = store.read("entity-resolution-ir")
+        label_to_ids: dict[str, list[str]] = defaultdict(list)
+        for n, d in G.nodes(data=True):
+            label_to_ids[d.get("label", "")].append(n)
+        for g in er.get("merged_groups", []):
+            ids = []
+            for lbl in g.get("labels", []):
+                ids.extend(label_to_ids.get(lbl, []))
+            ids = list(dict.fromkeys(ids))  # dedupe, preserve order
+            if len(ids) < 2:
+                continue  # no two real nodes share this label set
+            keep = max(ids, key=lambda n: G.degree(n))
+            remap = {i: keep for i in ids if i != keep}
+            new_edges = []
+            seen_e = set()
+            for u, v, e in G.edges(data=True):
+                nu, nv = remap.get(u, u), remap.get(v, v)
+                if nu == nv:
+                    continue
+                key = (min(nu, nv), max(nu, nv), e.get("type"))
+                if key in seen_e:
+                    continue
+                seen_e.add(key)
+                new_edges.append((nu, nv, e))
+            G.clear_edges()
+            for nu, nv, e in new_edges:
+                G.add_edge(nu, nv, **e)
+            for old in remap:
+                if old in G and keep in G:
+                    G.nodes[keep].update(G.nodes[old])
+                    G.remove_node(old)
+            merged_meta = {n: dict(d) for n, d in G.nodes(data=True)}
+            node_meta.clear()
+            node_meta.update(merged_meta)
+            label_for.update({n: d.get("label", "") for n, d in node_meta.items()})
+
     # --- write artifacts ------------------------------------------------------
     nodes_out = [
         {"id": n, "label": d["label"], "kind": d["kind"],

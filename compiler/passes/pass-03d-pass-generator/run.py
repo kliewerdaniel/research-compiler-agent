@@ -234,6 +234,25 @@ def scaffold(item: dict, passes_dir: str) -> dict:
     }
 
 
+def _resolve_ledger_item(ledger_path: str, title: str) -> bool:
+    """Mark the chosen backlog item as resolved ([x]) so the generator does not
+    re-scaffold the same capability on the next run.
+
+    The ledger is the compiler's own work queue; resolving an item is the
+    natural side effect of having generated its pass. Returns True if edited.
+    """
+    text = open(ledger_path, encoding="utf-8").read()
+    # Flip the checkbox on the unresolved item line for this exact title.
+    pat = re.compile(
+        r"^(\s*-\s*\[) \](?=\s+" + re.escape(title) + r"\b)",
+        re.MULTILINE)
+    new_text, n = pat.subn(r"\1x]", text)
+    if n:
+        with open(ledger_path, "w", encoding="utf-8") as fh:
+            fh.write(new_text)
+    return bool(n)
+
+
 def main() -> int:
     build_dir = sys.argv[1] if len(sys.argv) > 1 else os.getcwd()
     store = ArtifactStore(build_dir)
@@ -265,11 +284,15 @@ def main() -> int:
     top = backlog[0]
     passes_dir = os.path.join(_REPO, "passes")
     gen = scaffold(top, passes_dir)
+    # Resolve the backlog item so the next run picks the *next* proposal instead
+    # of regenerating the same pass (idempotent loop).
+    resolved = _resolve_ledger_item(ledger_path, top["title"])
 
     ir = {
         "schema_version": "1.0",
         "generated_pass": gen,
         "backlog_remaining": len(backlog) - 1,
+        "ledger_item_resolved": resolved,
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "note": "compiler extended itself from the self-improvement backlog",
     }

@@ -24,7 +24,8 @@ if _REPO not in sys.path:
 from core.llm_pass import parse_port_model, run_model_pass
 
 PRODUCES = "research-generation-ir"
-CONSUMES = ["gap-analysis-ir", "knowledge-graph-ir", "style-model-ir"]
+CONSUMES = ["gap-analysis-ir", "knowledge-graph-ir", "style-model-ir",
+            "research-debt-ir"]
 
 
 def build_user_prompt(inputs: dict) -> str:
@@ -98,6 +99,43 @@ def build_user_prompt(inputs: dict) -> str:
                 "claim_contra": r.get("claim_contra"),
             })
 
+    # Opportunistically surface the top research-debt consolidation proposals.
+    # A consolidation proposal is a well-grounded "write this post" topic
+    # (deepen a thin post, develop an under-explored concept, consolidate an
+    # orphan topic) — ideal research directions because the corpus already
+    # signals the gap. Surfaced so the model can prefer them when grounded.
+    debt_proposals = []
+    debt_concepts = []
+    debt_score = None
+    rd = inputs.get("research-debt-ir")
+    if not isinstance(rd, dict):
+        try:
+            from core.artifacts import ArtifactStore as _AS
+            _bd = inputs.get("__build_dir__")
+            if _bd:
+                _store = _AS(_bd)
+                if _store.has("research-debt-ir"):
+                    rd = _store.read("research-debt-ir")
+        except Exception:
+            rd = None
+    if isinstance(rd, dict):
+        debt_score = rd.get("debt_score")
+        for p in sorted(rd.get("consolidation_proposals", []),
+                        key=lambda x: x.get("priority", 0), reverse=True)[:8]:
+            debt_proposals.append({
+                "type": p.get("type"),
+                "topic": p.get("topic"),
+                "doc_id": p.get("doc_id"),
+                "priority": p.get("priority"),
+                "rationale": p.get("rationale"),
+            })
+        for c in rd.get("debt_concepts", [])[:8]:
+            debt_concepts.append({
+                "concept": c.get("concept"),
+                "mentions": c.get("mentions"),
+                "reason": c.get("reason"),
+            })
+
     payload = {
         "chosen_hypothesis": top,
         "gap_ranking_source": gap_source,
@@ -106,6 +144,11 @@ def build_user_prompt(inputs: dict) -> str:
             q.get("text") for q in ga.get("unanswered_questions", [])[:12]
         ],
         "contradiction_resolutions": resolutions,
+        "research_debt": {
+            "debt_score": debt_score,
+            "consolidation_proposals": debt_proposals,
+            "under_explored_concepts": debt_concepts,
+        },
         "style_rules": style_rules,
         "tone_notes": tone,
     }
@@ -116,14 +159,23 @@ def build_user_prompt(inputs: dict) -> str:
         "Context (structured):\n"
         + json.dumps(payload, ensure_ascii=False, indent=2)
         + "\n\nReturn JSON: {\"title\":str, \"slug\":str, \"abstract\":str, "
-        " \"sections\":[{\"heading\":str,\"body\":str}], \"tags\":[str], "
-        " \"references\":[str], \"next_steps\":[str], \"potential_projects\":[str], "
-        " \"becomes_software\":bool, \"repo_idea\":str}.\n"
+        "\"sections\":[{\"heading\":str,\"body\":str}], \"tags\":[str], "
+        "\"references\":[str], \"next_steps\":[str], \"potential_projects\":[str], "
+        "\"becomes_software\":bool, \"repo_idea\":str}.\n"
         "The 'sections' MUST follow the canonical structure: "
         "Abstract, The Problem, Existing Approaches, New Concept, Architecture, "
         "Implementation, Code Repository, Experiments, Applications, Future Work, "
         "Conclusion. Each body paragraph >= 120 words. Every claim must be "
         "traceable to the provided graph edges or stated as a hypothesis. "
+        "RESEARCH-DEBT STEERING (required when `research_debt.debt_score` > 0): "
+        "You MUST address the corpus's accumulated debt. Select the highest-"
+        "priority `consolidation_proposals` entry whose `topic` or `doc_id` is "
+        "traceable to the provided graph edges, and write the post to resolve it "
+        "(deepen a thin post, develop an under-explored concept, or consolidate an "
+        "orphan topic). Do NOT default to `chosen_hypothesis` unless no debt "
+        "proposal is graph-grounded. In `abstract` and the first section, name the "
+        "specific `consolidation_proposals` entry you are addressing and quote its "
+        "`rationale`. This makes the post a direct repayment of research debt. "
         "Respond with JSON only."
     )
 

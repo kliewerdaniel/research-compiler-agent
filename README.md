@@ -49,8 +49,10 @@ produce inspectable artifacts:
 | `pass-02-extract` | `knowledge-extraction-ir` | Per-article concepts, tech, repos, code, future questions |
 | `pass-03-gap-analysis` | `gap-analysis-ir` | Co-occurrence gaps + 40 ranked research directions |
 | `pass-03c-contradictions` | `contradictions-ir` | **Contradiction mining.** Groups claim sentences by concept and flags opposing stances → `contradicts` reasoning edges + resolution topics |
-| `pass-04-knowledge-graph` | `knowledge-graph-ir` | **NetworkX knowledge graph** (nodes/edges, 39 gap edges, + `contradicts` edges from pass-03c) + GraphML |
+| `pass-04-knowledge-graph` | `knowledge-graph-ir` | **NetworkX knowledge graph** (nodes/edges, 39 gap edges, + `contradicts` edges from pass-03c) + GraphML; applies `entity-resolution-ir` from pass-12 to merge duplicate nodes |
 | `pass-03d-pass-generator` | `pass-generator-ir` | **Self-writing pass generator.** Reads the self-improvement backlog (`agents/self_improvement.md`), scaffolds a runnable pass dir (`pass-NN-<slug>/`) into `compiler/passes/`; the next build discovers + runs it |
+| `pass-08-a-research-debt-pass` | `research-debt-ir` | **Research-debt tracking.** Thin/image-only posts, under-explored concepts, orphan topics, unanswered questions → `debt_score` + ranked consolidation proposals |
+| `pass-12-an-entity-resolution` | `entity-resolution-ir` | **Entity resolution.** Reads the real graph, finds same-kind label variants (versioned/owner-variant repos, spacing variants) and emits a merge plan that pass-04 applies (2-run convergence on a fresh build, 1-run incrementally) |
 
 > **The ledger is a living work queue.** `pass-03d-pass-generator` consumes the
 > `ledger` (a special dependency hashed like `source`), so adding a `- [ ]`
@@ -72,7 +74,7 @@ top research direction: "Synthesizing memory with agent" (co-occurrence = 0)
 | Pass | Produces | What it does |
 |---|---|---|
 | `pass-03b-embeddings` | `embeddings-ir` | **Semantic gap ranker.** Embeds concepts via Ollama (`nomic-embed-text`), finds pairs that are semantically close but rarely co-occur, and re-ranks the research hypotheses by semantic affinity. |
-| `pass-05-research-generation` | `research-generation-ir` | Full research post in the house voice (11-section template). Prefers the embedding-reranked hypotheses when `embeddings-ir` is present. |
+| `pass-05-research-generation` | `research-generation-ir` | Full research post in the house voice (11-section template). Prefers the embedding-reranked hypotheses when `embeddings-ir` is present, surfaces contradiction resolutions, and consumes `research-debt-ir` to steer toward ranked consolidation proposals (deepen thin posts, develop under-explored concepts, consolidate orphan topics). |
 | `pass-06-repo-generation` | `repo-generation-ir` | Repo scaffold (README, structure, roadmap, example code, tests) |
 | `pass-07-self-improvement` | `self-improvement-ir` | Capability ledger + next-capability proposal |
 

@@ -1,0 +1,12 @@
+id: pass-12-an-entity-resolution
+name: an entity-resolution pass that merges duplicate person/repo nodes in the graph (e.g. "Orinth" vs "Ornith")
+produces: entity-resolution-ir
+consumes: [knowledge-graph-ir]
+entrypoint: run.py
+deterministic: true
+model_required: false
+generated_by: pass-03d-pass-generator
+description: >
+  Resolves duplicate knowledge-graph nodes (versioned/owner-variant repos,
+  spacing variants) via conservative edit-distance matching, and emits a merge
+  plan that pass-04 applies when writing the graph.
